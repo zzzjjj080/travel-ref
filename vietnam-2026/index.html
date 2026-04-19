@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ベトナム 2026.5</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+    background: #f5f5f0;
+    padding: 16px;
+    color: #1a1a1a;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .page { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+  .back-link { font-size: 13px; color: #888; text-decoration: none; }
+  .back-link:hover { color: #555; }
+  .page-title { font-size: 20px; font-weight: 600; color: #1a1a1a; }
+  .page-sub { font-size: 13px; color: #888; margin-top: 4px; }
+  h2 { font-size: 13px; font-weight: 500; color: #888; margin-bottom: 8px; letter-spacing: .04em; }
+  .card { background: #fff; border: 0.5px solid #d0d0c8; border-radius: 12px; overflow: hidden; }
+  .card-inner { padding: 14px 16px; }
+
+  /* タイムライン */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-day { border-top: 0.5px solid #e8e8e4; padding: 12px 16px; }
+  .tl-day:first-child { border-top: none; }
+  .tl-date { font-size: 12px; font-weight: 600; color: #888; margin-bottom: 4px; }
+  .tl-title { font-size: 14px; font-weight: 500; }
+  .tl-detail { font-size: 12px; color: #666; margin-top: 2px; }
+  .tl-hotel { font-size: 12px; color: #4a90d9; margin-top: 4px; }
+
+  /* 移動手段テーブル */
+  .transport-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .transport-table th {
+    text-align: left; font-weight: 500; color: #888;
+    padding: 6px 8px; border-bottom: 0.5px solid #e8e8e4;
+  }
+  .transport-table td { padding: 8px 8px; border-bottom: 0.5px solid #f0f0ec; vertical-align: top; }
+  .transport-table tr:last-child td { border-bottom: none; }
+  .flight-no { font-family: monospace; font-weight: 600; color: #1a1a1a; }
+
+  /* ホテル */
+  .hotel-item { padding: 12px 16px; border-top: 0.5px solid #e8e8e4; }
+  .hotel-item:first-child { border-top: none; }
+  .hotel-name { font-size: 14px; font-weight: 500; }
+  .hotel-meta { font-size: 12px; color: #888; margin-top: 2px; }
+
+  /* カード緊急連絡先 */
+  .contact-item { padding: 10px 16px; border-top: 0.5px solid #e8e8e4; }
+  .contact-item:first-child { border-top: none; }
+  .contact-name { font-size: 13px; font-weight: 500; }
+  .contact-tel { font-size: 13px; color: #c0392b; font-family: monospace; margin-top: 2px; }
+  .contact-note { font-size: 11px; color: #888; margin-top: 1px; }
+
+  /* レート・情報 */
+  .info-row { padding: 8px 16px; border-top: 0.5px solid #e8e8e4; display: flex; justify-content: space-between; align-items: center; }
+  .info-row:first-child { border-top: none; }
+  .info-label { font-size: 13px; color: #555; }
+  .info-val { font-size: 13px; font-weight: 500; }
+
+  /* フレーズ */
+  .phrase-item { padding: 8px 16px; border-top: 0.5px solid #e8e8e4; }
+  .phrase-item:first-child { border-top: none; }
+  .phrase-vn { font-size: 14px; font-weight: 500; }
+  .phrase-ja { font-size: 12px; color: #888; }
+
+  /* チェックリスト */
+  .checklist { padding: 12px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; }
+  .check-item input[type=checkbox] { margin-top: 2px; flex-shrink: 0; }
+  .check-section { font-size: 12px; font-weight: 600; color: #888; padding: 6px 16px 0; letter-spacing: .04em; border-top: 0.5px solid #e8e8e4; }
+  .check-section:first-child { border-top: none; }
+
+  /* アプリ */
+  .app-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 14px 16px; }
+  .app-item { background: #f9f9f7; border-radius: 8px; padding: 10px 12px; }
+  .app-name { font-size: 13px; font-weight: 500; }
+  .app-desc { font-size: 11px; color: #888; margin-top: 2px; }
+
+  .footer { font-size: 11px; color: #aaa; text-align: right; margin-top: 4px; }
+  .tag {
+    display: inline-block; font-size: 10px; padding: 1px 6px;
+    border-radius: 4px; margin-left: 6px; vertical-align: middle;
+  }
+  .tag-flight { background: #e8f4fd; color: #2980b9; }
+  .tag-train { background: #eafaf1; color: #27ae60; }
+  .tag-bus { background: #fef9e7; color: #d4a017; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <a class="back-link" href="/travel-ref/">← 海外旅行リファレンス</a>
+
+  <div>
+    <div class="page-title">🇻🇳 ベトナム 2026.5</div>
+    <div class="page-sub">2026年5月3日（日）〜 5月10日（日） ／ 一人旅</div>
+  </div>
+
+  <!-- タイムライン -->
+  <div>
+    <h2>タイムライン</h2>
+    <div class="card timeline">
+      <div class="tl-day">
+        <div class="tl-date">5/3（日）出発日</div>
+        <div class="tl-title">仙台 → 東京 → 香港 → ホーチミン</div>
+        <div class="tl-detail">仙台発 新幹線 → 東京成田 → UO629（成田→香港）→ UO540（香港→ホーチミン）</div>
+        <div class="tl-hotel">🏨 Zoo si homestay（ホーチミン）</div>
+      </div>
+      <div class="tl-day">
+        <div class="tl-date">5/4（月）</div>
+        <div class="tl-title">ホーチミン 観光・滞在</div>
+        <div class="tl-detail">ホーチミン市内</div>
+        <div class="tl-hotel">🏨 Zoo si homestay（ホーチミン）</div>
+      </div>
+      <div class="tl-day">
+        <div class="tl-date">5/5（火）</div>
+        <div class="tl-title">ホーチミン → ニンビン（夜行列車）</div>
+        <div class="tl-detail">ベトナム国鉄 SE8 乗車（ホーチミン→ハノイ方面）</div>
+        <div class="tl-hotel">🚂 SE8 車内泊</div>
+      </div>
+      <div class="tl-day">
+        <div class="tl-date">5/6（水）</div>
+        <div class="tl-title">ニンビン 到着・観光</div>
+        <div class="tl-detail">SE8 ニンビン着 → 世界遺産トランアン・チャンアン観光</div>
+        <div class="tl-hotel">🏨 Ninh Binh Greenland</div>
+      </div>
+      <div class="tl-day">
+        <div class="tl-date">5/7（木）</div>
+        <div class="tl-title">ニンビン → ハノイ</div>
+        <div class="tl-detail">ニンビン → ハノイ 移動（バスまたは列車）</div>
+        <div class="tl-hotel">🏨 Hanoi La Cascada</div>
+      </div>
+      <div class="tl-day">
+        <div class="tl-date">5/8（金）</div>
+        <div class="tl-title">ハノイ 観光</div>
+        <div class="tl-detail">旧市街・ホアンキエム湖・世界遺産 etc.</div>
+        <div class="tl-hotel">🏨 Hanoi La Cascada</div>
+      </div>
+      <div class="tl-day">
+        <div class="tl-date">5/9（土）</div>
+        <div class="tl-title">ハノイ → 香港 → （空港泊）</div>
+        <div class="tl-detail">ハノイ内陸バス → 空港 → UO541（ハノイ→香港）→ 香港空港泊</div>
+        <div class="tl-hotel">🏨 New Sky Airport（香港空港 or 近辺）</div>
+      </div>
+      <div class="tl-day">
+        <div class="tl-date">5/10（日）帰国日</div>
+        <div class="tl-title">香港 → 東京 → 仙台</div>
+        <div class="tl-detail">UO650（香港→成田）→ 東京成田 → 新幹線 → 仙台着</div>
+        <div class="tl-hotel">🏠 帰宅</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 移動手段 -->
+  <div>
+    <h2>移動手段</h2>
+    <div class="card">
+      <table class="transport-table">
+        <thead>
+          <tr>
+            <th>便名・手段</th>
+            <th>区間</th>
+            <th>日付</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="flight-no">新幹線</span><span class="tag tag-train">新幹線</span></td>
+            <td>仙台 → 東京</td>
+            <td>5/3</td>
+          </tr>
+          <tr>
+            <td><span class="flight-no">UO629</span><span class="tag tag-flight">航空</span></td>
+            <td>成田 → 香港（HKG）</td>
+            <td>5/3</td>
+          </tr>
+          <tr>
+            <td><span class="flight-no">HK エクスプレス バス</span><span class="tag tag-bus">バス</span></td>
+            <td>香港空港 乗継</td>
+            <td>5/3</td>
+          </tr>
+          <tr>
+            <td><span class="flight-no">UO540</span><span class="tag tag-flight">航空</span></td>
+            <td>香港（HKG）→ ホーチミン（SGN）</td>
+            <td>5/3</td>
+          </tr>
+          <tr>
+            <td><span class="flight-no">SE8</span><span class="tag tag-train">国鉄</span></td>
+            <td>ホーチミン → ニンビン（夜行）</td>
+            <td>5/5〜5/6</td>
+          </tr>
+          <tr>
+            <td><span class="flight-no">UO541</span><span class="tag tag-flight">航空</span></td>
+            <td>ハノイ（HAN）→ 香港（HKG）</td>
+            <td>5/9</td>
+          </tr>
+          <tr>
+            <td><span class="flight-no">HK エクスプレス バス</span><span class="tag tag-bus">バス</span></td>
+            <td>香港空港 乗継</td>
+            <td>5/10</td>
+          </tr>
+          <tr>
+            <td><span class="flight-no">UO650</span><span class="tag tag-flight">航空</span></td>
+            <td>香港（HKG）→ 成田（NRT）</td>
+            <td>5/10</td>
+          </tr>
+          <tr>
+            <td><span class="flight-no">Skyliner</span><span class="tag tag-train">電車</span></td>
+            <td>成田 → 東京</td>
+            <td>5/10</td>
+          </tr>
+          <tr>
+            <td><span class="flight-no">新幹線</span><span class="tag tag-train">新幹線</span></td>
+            <td>東京 → 仙台</td>
+            <td>5/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ホテル -->
+  <div>
+    <h2>ホテル</h2>
+    <div class="card">
+      <div class="hotel-item">
+        <div class="hotel-name">Zoo si homestay</div>
+        <div class="hotel-meta">📍 ホーチミン ／ 5/3〜5/5（2泊）</div>
+      </div>
+      <div class="hotel-item">
+        <div class="hotel-name">Ninh Binh Greenland</div>
+        <div class="hotel-meta">📍 ニンビン ／ 5/6〜5/7（1泊）</div>
+      </div>
+      <div class="hotel-item">
+        <div class="hotel-name">Hanoi La Cascada</div>
+        <div class="hotel-meta">📍 ハノイ ／ 5/7〜5/9（2泊）</div>
+      </div>
+      <div class="hotel-item">
+        <div class="hotel-name">New Sky Airport</div>
+        <div class="hotel-meta">📍 香港空港周辺 ／ 5/9〜5/10（1泊）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- クレジットカード紛失連絡先 -->
+  <div>
+    <h2>カード紛失時 緊急連絡先</h2>
+    <div class="card">
+      <div class="contact-item">
+        <div class="contact-name">EPOSカード</div>
+        <div class="contact-tel">+81-3-3383-0101</div>
+        <div class="contact-note">海外からも通話料無料</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-name">三菱UFJニコス（ゴールドカード）</div>
+        <div class="contact-tel">+81-3-6737-3232</div>
+        <div class="contact-note">24時間対応</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-name">Amazonカード（三井住友）</div>
+        <div class="contact-tel">+81-3-6832-7600</div>
+        <div class="contact-note">VJデスク経由</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-name">PayPayカード</div>
+        <div class="contact-tel">0120-990-634</div>
+        <div class="contact-note">海外からは +81-50-3355-7000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 現地情報 -->
+  <div>
+    <h2>現地情報</h2>
+    <div class="card">
+      <div class="info-row">
+        <div class="info-label">通貨</div>
+        <div class="info-val">ベトナムドン（VND）</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">レート目安</div>
+        <div class="info-val">1万VND ≈ 60円</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">電圧 / プラグ</div>
+        <div class="info-val">220V ／ A型・C型</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">時差</div>
+        <div class="info-val">日本 −2時間（UTC+7）</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Wi-Fi / SIM</div>
+        <div class="info-val">現地SIM or 海外ローミング</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">緊急番号</div>
+        <div class="info-val">警察 113 ／ 救急 115</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ベトナム語フレーズ -->
+  <div>
+    <h2>よく使うフレーズ</h2>
+    <div class="card">
+      <div class="phrase-item">
+        <div class="phrase-vn">Xin chào（シンチャオ）</div>
+        <div class="phrase-ja">こんにちは</div>
+      </div>
+      <div class="phrase-item">
+        <div class="phrase-vn">Cảm ơn（カムオン）</div>
+        <div class="phrase-ja">ありがとう</div>
+      </div>
+      <div class="phrase-item">
+        <div class="phrase-vn">Bao nhiêu tiền?（バオニェウティェン）</div>
+        <div class="phrase-ja">いくらですか？</div>
+      </div>
+      <div class="phrase-item">
+        <div class="phrase-vn">Cho tôi...（チョートイ）</div>
+        <div class="phrase-ja">〜をください</div>
+      </div>
+      <div class="phrase-item">
+        <div class="phrase-vn">Không cay（コンカイ）</div>
+        <div class="phrase-ja">辛くしないで</div>
+      </div>
+      <div class="phrase-item">
+        <div class="phrase-vn">Nhà vệ sinh ở đâu?（ニャーベシン オー ダウ）</div>
+        <div class="phrase-ja">トイレはどこ？</div>
+      </div>
+      <div class="phrase-item">
+        <div class="phrase-vn">Gọi taxi giúp tôi（ゴイタクシー ジュップトイ）</div>
+        <div class="phrase-ja">タクシーを呼んでください</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 必須アプリ -->
+  <div>
+    <h2>必須アプリ</h2>
+    <div class="card">
+      <div class="app-grid">
+        <div class="app-item">
+          <div class="app-name">Grab</div>
+          <div class="app-desc">配車・フードデリバリー</div>
+        </div>
+        <div class="app-item">
+          <div class="app-name">Google Maps</div>
+          <div class="app-desc">オフラインマップ事前DL</div>
+        </div>
+        <div class="app-item">
+          <div class="app-name">Google 翻訳</div>
+          <div class="app-desc">カメラ翻訳が便利</div>
+        </div>
+        <div class="app-item">
+          <div class="app-name">XE Currency</div>
+          <div class="app-desc">リアルタイムレート確認</div>
+        </div>
+        <div class="app-item">
+          <div class="app-name">HK Express</div>
+          <div class="app-desc">搭乗券・フライト確認</div>
+        </div>
+        <div class="app-item">
+          <div class="app-name">booking.com</div>
+          <div class="app-desc">ホテル予約確認</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 出発前チェックリスト -->
+  <div>
+    <h2>出発前チェックリスト</h2>
+    <div class="card">
+      <div class="check-section">書類・手続き</div>
+      <div class="checklist">
+        <label class="check-item"><input type="checkbox"> パスポート（有効期限6ヶ月以上）</label>
+        <label class="check-item"><input type="checkbox"> 航空券 eチケット 全区間印刷 or スクショ</label>
+        <label class="check-item"><input type="checkbox"> ホテル予約確認メール 全宿</label>
+        <label class="check-item"><input type="checkbox"> 海外旅行保険 加入確認</label>
+        <label class="check-item"><input type="checkbox"> クレジットカード 海外利用設定 ON</label>
+        <label class="check-item"><input type="checkbox"> 国際キャッシュカード / 現金（VND or USD）</label>
+      </div>
+      <div class="check-section">デバイス・通信</div>
+      <div class="checklist">
+        <label class="check-item"><input type="checkbox"> スマホ 満充電 ＋ モバイルバッテリー</label>
+        <label class="check-item"><input type="checkbox"> 海外SIM or ローミング設定</label>
+        <label class="check-item"><input type="checkbox"> イヤホン・充電ケーブル</label>
+        <label class="check-item"><input type="checkbox"> 変換プラグ（C型）</label>
+        <label class="check-item"><input type="checkbox"> Google Maps オフラインDL（ホーチミン・ハノイ・ニンビン）</label>
+      </div>
+      <div class="check-section">荷物</div>
+      <div class="checklist">
+        <label class="check-item"><input type="checkbox"> 液体類 100ml以下 ジップ袋まとめ</label>
+        <label class="check-item"><input type="checkbox"> 日焼け止め・虫除け</label>
+        <label class="check-item"><input type="checkbox"> 常備薬（正露丸・整腸薬・痛み止め）</label>
+        <label class="check-item"><input type="checkbox"> 雨具（折り畳み傘 or レインウェア）</label>
+        <label class="check-item"><input type="checkbox"> 速乾タオル</label>
+      </div>
+      <div class="check-section">当日確認</div>
+      <div class="checklist">
+        <label class="check-item"><input type="checkbox"> 家の鍵・ガス・電気</label>
+        <label class="check-item"><input type="checkbox"> Grab アプリ起動確認</label>
+        <label class="check-item"><input type="checkbox"> カード緊急連絡先 スクショ保存</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">travel-ref / vietnam-2026</div>
+</div>
+</body>
+</html>

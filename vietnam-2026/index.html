@@ -279,6 +279,19 @@
     color:var(--text-sub);
   }
   .tab.active{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:600}
+
+  /* 直近日程ハイライト */
+  .day-highlight{
+    border-color:var(--accent);
+    box-shadow:0 0 0 1px rgba(255,184,77,.25),0 4px 16px rgba(255,184,77,.08);
+  }
+  .day-badge{
+    display:inline-block;
+    font-size:9px;font-weight:700;letter-spacing:.08em;
+    background:var(--accent);color:var(--bg);
+    padding:1px 5px;border-radius:3px;
+    margin-left:6px;vertical-align:middle;
+  }
 </style>
 </head>
 <body>
@@ -1163,5 +1176,45 @@
   <div style="margin-top:8px">最終更新：2026.4.27</div>
 </footer>
 
+<script>
+(function(){
+  var today=new Date();today.setHours(0,0,0,0);
+  var trips=[
+    new Date(2026,4,3),new Date(2026,4,4),new Date(2026,4,5),
+    new Date(2026,4,6),new Date(2026,4,7),new Date(2026,4,8),
+    new Date(2026,4,9),new Date(2026,4,10),new Date(2026,4,11)
+  ];
+  var labels=['仙台発','香港→Hanoi→Sapa','Sapa観光①','Sapa→Ninh Binh','Ninh Binh観光','Ninh Binh→Hanoi','Hanoi終日','Hanoi→成田','長町→帰宅'];
+  var days=['5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11'];
+  var dep=trips[0],ret=trips[trips.length-1];
+  var lbl=document.querySelector('.now-indicator .label');
+  var cnt=document.querySelector('.now-indicator .content');
+  if(today<dep){
+    var d=Math.round((dep-today)/864e5);
+    lbl.textContent='出発まで '+d+'日';
+    cnt.textContent='5/3 19:31 こまち38号（仙台駅）';
+  }else if(today<=ret){
+    lbl.textContent='旅行中 🌏';
+    for(var i=0;i<trips.length;i++){
+      if(today.getTime()===trips[i].getTime()){cnt.textContent=days[i]+' '+labels[i];break;}
+    }
+  }else{
+    lbl.textContent='旅行終了 🎉';
+    cnt.textContent='おかえりなさい！';
+  }
+  // 直近の日程カードをハイライト
+  var cards=document.querySelectorAll('.timeline-day');
+  var idx=-1;
+  for(var i=0;i<trips.length;i++){if(today<=trips[i]){idx=i;break;}}
+  if(idx>=0&&cards[idx]){
+    cards[idx].classList.add('day-highlight');
+    var dateEl=cards[idx].querySelector('.date');
+    var badge=document.createElement('span');
+    badge.className='day-badge';
+    badge.textContent=today.getTime()===trips[idx].getTime()?'TODAY':'NEXT';
+    dateEl.appendChild(badge);
+  }
+})();
+</script>
 </body>
 </html>

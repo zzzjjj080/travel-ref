@@ -280,6 +280,25 @@
   }
   .tab.active{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:600}
 
+  /* 参照アプリ表示ブロック */
+  .ref-app{
+    display:flex;align-items:flex-start;gap:10px;
+    margin-top:10px;
+    background:rgba(96,165,250,.13);
+    border:1.5px solid rgba(96,165,250,.5);
+    border-radius:8px;
+    padding:10px 12px;
+  }
+  .ref-app-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+  .ref-app-body{flex:1}
+  .ref-app-label{
+    font-size:9px;font-weight:700;letter-spacing:.12em;
+    color:var(--info);text-transform:uppercase;margin-bottom:3px;
+  }
+  .ref-app-main{font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px}
+  .ref-app-step{font-size:11px;color:var(--text-sub);line-height:1.6}
+  .ref-app-step strong{color:var(--accent);font-family:"SF Mono",Menlo,monospace;font-size:12px}
+
   /* 予約済みバッジ */
   .booked{
     display:inline-block;
@@ -854,8 +873,15 @@
       <dt>連絡</dt><dd>vangdesapa1991@gmail.com</dd>
       <dt>含む</dt><dd>朝食・WiFi・駐車場</dd>
       <dt>備考</dt><dd>返金不可（3/5以降）</dd>
-      <dt>📱 参照</dt><dd>Agodaアプリ → 予約 → 予約ID 1705123410</dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ</div>
+        <div class="ref-app-main">Agodaアプリ</div>
+        <div class="ref-app-step">予約 → 予約ID <strong>1705123410</strong></div>
+      </div>
+    </div>
     <a class="maplink" href="https://maps.google.com/?q=Zoo+si+homestay+Sapa" target="_blank">📍 Google Mapsで開く</a>
   </div>
 
@@ -868,8 +894,15 @@
       <dt>住所</dt><dd>Khe Thuong, Hoa Lu, Ninh Binh</dd>
       <dt>連絡</dt><dd><a href="tel:+84374692699">+84 374 692 699</a><br>bookingninhbinhhomestay@gmail.com</dd>
       <dt>含む</dt><dd>朝食・WiFi・プール・自転車</dd>
-      <dt>📱 参照</dt><dd>Agodaアプリ → 予約 → 予約ID 1705777669</dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ</div>
+        <div class="ref-app-main">Agodaアプリ</div>
+        <div class="ref-app-step">予約 → 予約ID <strong>1705777669</strong></div>
+      </div>
+    </div>
     <a class="maplink" href="https://maps.google.com/?q=Ninh+Binh+Greenland+Homestay" target="_blank">📍 Google Mapsで開く</a>
   </div>
 
@@ -881,8 +914,15 @@
       <dt>予約ID</dt><dd><span class="code">1705863170</span>（Agoda）</dd>
       <dt>住所</dt><dd>9 Gam Cau Street, Dong Xuan Ward, Hoan Kiem District</dd>
       <dt>連絡</dt><dd><a href="tel:+84938181990">+84 938 181 990</a><br>booking@hanoilacascadahouse.com</dd>
-      <dt>📱 参照</dt><dd>Agodaアプリ → 予約 → 予約ID 1705863170</dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ</div>
+        <div class="ref-app-main">Agodaアプリ</div>
+        <div class="ref-app-step">予約 → 予約ID <strong>1705863170</strong></div>
+      </div>
+    </div>
     <a class="maplink" href="https://maps.google.com/?q=Hanoi+La+Cascada+House+9+Gam+Cau" target="_blank">📍 Google Mapsで開く</a>
   </div>
 
@@ -895,8 +935,15 @@
       <dt>住所</dt><dd>06 Quoc lo 2, Thon Dien Xa, Xa Noi Bai, Ha Noi</dd>
       <dt>連絡</dt><dd><a href="tel:+84987987537">+84 987 987 537</a><br>newskyairporthotel@gmail.com</dd>
       <dt>空港送迎</dt><dd>5/10 06:30（80k VND）予約済<br>※UO541便のため第2ターミナルへ</dd>
-      <dt>📱 参照</dt><dd>Agodaアプリ → 予約 → 予約ID 1705868421</dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ</div>
+        <div class="ref-app-main">Agodaアプリ</div>
+        <div class="ref-app-step">予約 → 予約ID <strong>1705868421</strong></div>
+      </div>
+    </div>
     <a class="maplink" href="https://maps.google.com/?q=New+Sky+Airport+Hotel+Noi+Bai" target="_blank">📍 Google Mapsで開く</a>
   </div>
 </section>
@@ -912,8 +959,15 @@
       <dt>座席</dt><dd>14号車 3番D席（指定席）</dd>
       <dt>予約</dt><dd><span class="code">E83087</span>（えきねっと）</dd>
       <dt>乗車</dt><dd>Suica登録済 → iPhoneで改札</dd>
-      <dt>📱 参照</dt><dd>えきねっとアプリ → 予約確認 → E83087<br><span style="color:var(--text-dim)">※Suicaに紐付済なのでアプリ不要・iPhone改札のみ</span></dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">🚄</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ</div>
+        <div class="ref-app-main">Suica（iPhone）で改札通過</div>
+        <div class="ref-app-step">確認はえきねっとアプリ → 予約確認 → <strong>E83087</strong></div>
+      </div>
+    </div>
   </div>
 
   <div class="booking transport flight">
@@ -923,8 +977,15 @@
       <dt>空港</dt><dd>HND T3 → HKG</dd>
       <dt>予約</dt><dd><span class="code">ZCPZ3N</span>（HK Express）<br>エクスペディア旅程 <span class="code">73388162027638</span></dd>
       <dt>必須</dt><dd>搭乗券QR・パスポート</dd>
-      <dt>📱 参照</dt><dd>Expediaアプリ → 旅行 → 旅程番号 73388162027638<br><span style="color:var(--text-dim)">またはHK Expressアプリ → My Bookings → ZCPZ3N</span></dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ</div>
+        <div class="ref-app-main">Expediaアプリ</div>
+        <div class="ref-app-step">旅行 → 旅程番号 <strong>73388162027638</strong><br>またはHK Expressアプリ → My Bookings → <strong>ZCPZ3N</strong></div>
+      </div>
+    </div>
   </div>
 
   <div class="booking transport flight">
@@ -933,8 +994,15 @@
       <dt>日時</dt><dd>5/4 07:40発（香港時間）→ 08:50着（現地時間）</dd>
       <dt>空港</dt><dd>HKG T1 → HAN T2</dd>
       <dt>乗継時間</dt><dd>約1h40m（HKG 06:00着→07:40発）</dd>
-      <dt>📱 参照</dt><dd>Expediaアプリ → 旅程番号 73388162027638（UO629と同一予約）<br><span style="color:var(--text-dim)">またはHK Expressアプリ → ZCPZ3N</span></dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ（UO629と同一予約）</div>
+        <div class="ref-app-main">Expediaアプリ</div>
+        <div class="ref-app-step">旅行 → 旅程番号 <strong>73388162027638</strong><br>またはHK Expressアプリ → My Bookings → <strong>ZCPZ3N</strong></div>
+      </div>
+    </div>
   </div>
 
   <div class="booking transport bus">
@@ -947,8 +1015,15 @@
       <dt>予約</dt><dd><span class="code">UPW145862</span>（Klook）</dd>
       <dt>提示</dt><dd>KlookアプリのQRコード</dd>
       <dt>問合</dt><dd><a href="tel:+84979252622">+84 979 252 622</a>（WhatsApp）</dd>
-      <dt>📱 参照</dt><dd>Klookアプリ → マイ予約 → 予約番号 UPW145862 → QR表示</dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ・QR表示</div>
+        <div class="ref-app-main">Klookアプリ</div>
+        <div class="ref-app-step">マイ予約 → 予約番号 <strong>UPW145862</strong> → QRコード表示</div>
+      </div>
+    </div>
   </div>
 
   <div class="booking transport bus">
@@ -961,8 +1036,15 @@
       <dt>予約</dt><dd><span class="code">NYG979086</span>（Klook）</dd>
       <dt>提示</dt><dd>KlookアプリのQRコード</dd>
       <dt>問合</dt><dd><a href="tel:+84866224622">+84 866 224 622</a>（WhatsApp）</dd>
-      <dt>📱 参照</dt><dd>Klookアプリ → マイ予約 → 予約番号 NYG979086 → QR表示</dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ・QR表示</div>
+        <div class="ref-app-main">Klookアプリ</div>
+        <div class="ref-app-step">マイ予約 → 予約番号 <strong>NYG979086</strong> → QRコード表示</div>
+      </div>
+    </div>
   </div>
 
   <div class="booking transport train">
@@ -973,8 +1055,15 @@
       <dt>予約</dt><dd><span class="code">VUCRQH</span><br>チケット <span class="code">164273017</span></dd>
       <dt>サイト</dt><dd>dsvn.vn（ベトナム国鉄公式）</dd>
       <dt>提示</dt><dd>QRコード＋パスポート（必須）</dd>
-      <dt>📱 参照</dt><dd>Gmailで「dsvn」または「VUCRQH」で検索 → 予約確認メール内のQR<br><span style="color:var(--text-dim)">またはdsvn.vnでログイン → 予約確認</span></dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">✉️</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くメール</div>
+        <div class="ref-app-main">Gmail</div>
+        <div class="ref-app-step">「<strong>VUCRQH</strong>」で検索 → 予約確認メール内のQRコード<br>またはdsvn.vnにログイン → 予約確認</div>
+      </div>
+    </div>
   </div>
 
   <div class="booking transport flight">
@@ -983,8 +1072,15 @@
       <dt>日時</dt><dd>5/10 09:35発 → 12:40着（香港時間）</dd>
       <dt>空港</dt><dd>HAN T2 → HKG</dd>
       <dt>予約</dt><dd><span class="code">ZCPZ3N</span>（HK Express）</dd>
-      <dt>📱 参照</dt><dd>Expediaアプリ → 旅程番号 73388162027638（往路と同一予約）<br><span style="color:var(--text-dim)">またはHK Expressアプリ → ZCPZ3N</span></dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ（往路と同一予約）</div>
+        <div class="ref-app-main">Expediaアプリ</div>
+        <div class="ref-app-step">旅行 → 旅程番号 <strong>73388162027638</strong><br>またはHK Expressアプリ → My Bookings → <strong>ZCPZ3N</strong></div>
+      </div>
+    </div>
   </div>
 
   <div class="booking transport flight">
@@ -993,8 +1089,15 @@
       <dt>日時</dt><dd>5/10 14:15発 → 19:45着（日本時間）</dd>
       <dt>空港</dt><dd>HKG T1 → NRT</dd>
       <dt>乗継時間</dt><dd>約1h35m（HKG 12:40着→14:15発・短め注意）</dd>
-      <dt>📱 参照</dt><dd>Expediaアプリ → 旅程番号 73388162027638（往路と同一予約）<br><span style="color:var(--text-dim)">またはHK Expressアプリ → ZCPZ3N</span></dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ（往路と同一予約）</div>
+        <div class="ref-app-main">Expediaアプリ</div>
+        <div class="ref-app-step">旅行 → 旅程番号 <strong>73388162027638</strong><br>またはHK Expressアプリ → My Bookings → <strong>ZCPZ3N</strong></div>
+      </div>
+    </div>
   </div>
 
   <div class="booking transport bus">
@@ -1009,8 +1112,15 @@
       <dt>予約番号</dt><dd><span class="code">37707977</span>（楽天トラベル）</dd>
       <dt>金額</dt><dd>8,900円（楽天トラベル）</dd>
       <dt>帰宅</dt><dd>長町駅から地下鉄南北線始発 → 泉中央 → 徒歩</dd>
-      <dt>📱 参照</dt><dd>楽天トラベルアプリ → マイページ → 予約確認 → 予約番号 37707977</dd>
     </dl>
+    <div class="ref-app">
+      <span class="ref-app-icon">📱</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">開くアプリ</div>
+        <div class="ref-app-main">楽天トラベルアプリ</div>
+        <div class="ref-app-step">マイページ → 予約確認 → 予約番号 <strong>37707977</strong></div>
+      </div>
+    </div>
   </div>
 </section>
 

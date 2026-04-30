@@ -280,6 +280,20 @@
   }
   .tab.active{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:600}
 
+  /* タイムラインから詳細へのジャンプリンク */
+  .detaillink{
+    display:inline-block;
+    margin-top:6px;
+    font-size:11px;font-weight:600;
+    color:var(--accent);
+    padding:3px 9px;
+    background:rgba(255,184,77,.1);
+    border-radius:4px;
+    border:1px solid rgba(255,184,77,.3);
+    margin-right:4px;
+  }
+  .detaillink:active{opacity:.6}
+
   /* 参照アプリ表示ブロック */
   .ref-app{
     display:flex;align-items:flex-start;gap:10px;
@@ -361,7 +375,7 @@
       <div class="time">19:31</div>
       <div class="body">
         <div class="title"><span class="tag move">移動</span>🚄 こまち38号<span class="booked">済</span></div>
-        <div class="detail">仙台 19:31 → 東京 21:04 / 14号車3番D席 / Suica紐付済→iPhone改札<br>予約 <span class="code">E83087</span> / 11,830円 <span style="color:var(--text-dim)">(えきねっと)</span></div>
+        <div class="detail">仙台 19:31 → 東京 21:04 / 14号車3番D席 / Suica紐付済→iPhone改札<br>予約 <span class="code">E83087</span> / 11,830円 <span style="color:var(--text-dim)">(えきねっと)</span><br><a class="detaillink" href="#tr-shinkansen">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
@@ -389,7 +403,7 @@
       <div class="time">26:20<br><span style="font-size:10px;color:var(--text-dim)">(2:20)</span></div>
       <div class="body">
         <div class="title"><span class="tag move">移動</span>✈️ UO629 羽田→香港<span class="booked">済</span></div>
-        <div class="detail">HND T3 02:20発<br>予約 <span class="code">ZCPZ3N</span> <span style="color:var(--text-dim)">(HK Express / Expedia)</span> / 旅程番号 <span class="code">73388162027638</span></div>
+        <div class="detail">HND T3 02:20発<br>予約 <span class="code">ZCPZ3N</span> <span style="color:var(--text-dim)">(HK Express / Expedia)</span> / 旅程番号 <span class="code">73388162027638</span><br><a class="detaillink" href="#tr-uo629">📋 予約詳細</a></div>
       </div>
     </div>
   </div>
@@ -411,7 +425,7 @@
       <div class="time">07:40<br><span style="font-size:10px;color:var(--text-dim)">(香港時間)</span></div>
       <div class="body">
         <div class="title"><span class="tag move">移動</span>✈️ UO540 香港→ハノイ<span class="booked">済</span></div>
-        <div class="detail">HKG T1 07:40発 → HAN 08:50着（現地時間）<span style="color:var(--text-dim)"> (HK Express / 予約ZCPZ3Nと同じ)</span></div>
+        <div class="detail">HKG T1 07:40発 → HAN 08:50着（現地時間）<span style="color:var(--text-dim)"> (HK Express / 予約ZCPZ3Nと同じ)</span><br><a class="detaillink" href="#tr-uo540">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
@@ -425,7 +439,7 @@
       <div class="time">14:00</div>
       <div class="body">
         <div class="title"><span class="tag move">移動</span>🚌 HK Buslines ハノイ→サパ 寝台バス<span class="booked">済</span></div>
-        <div class="detail">ノイバイ空港 国際線T1 <strong>柱01集合</strong> → Sapa HK Busオフィス<br>上段シングルキャビン / KlookアプリのQR提示<br>Klook予約 <span class="code">UPW145862</span> / 問合 +84 979 252 622<br><a class="maplink" href="https://maps.google.com/?q=21.2214,105.8070&zoom=17" target="_blank">📍 乗車場所：ノイバイT1 柱01（Google Maps）</a></div>
+        <div class="detail">ノイバイ空港 国際線T1 <strong>柱01集合</strong> → Sapa HK Busオフィス<br>上段シングルキャビン / KlookアプリのQR提示<br>Klook予約 <span class="code">UPW145862</span> / 問合 +84 979 252 622<br><a class="maplink" href="https://maps.google.com/?q=21.2214,105.8070&zoom=17" target="_blank">📍 乗車場所：ノイバイT1 柱01（Google Maps）</a> <a class="detaillink" href="#tr-bus-sapa">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
@@ -439,7 +453,7 @@
       <div class="time">20:00〜</div>
       <div class="body">
         <div class="title"><span class="tag stay">宿泊</span>🏨 Zoo si homestay チェックイン・夕食・就寝<span class="booked">済</span></div>
-        <div class="detail">Cat Cat, Sapa / One-Bedroom Chalet <span style="color:var(--text-dim)">(Agoda 1705123410)</span><br><a class="maplink" href="https://maps.google.com/?q=Zoo+si+homestay+Cat+Cat+Sa+Pa+Vietnam" target="_blank">📍 Google Mapsで開く</a></div>
+        <div class="detail">Cat Cat, Sapa / One-Bedroom Chalet <span style="color:var(--text-dim)">(Agoda 1705123410)</span><br><a class="maplink" href="https://maps.google.com/?q=Zoo+si+homestay+Cat+Cat+Sa+Pa+Vietnam" target="_blank">📍 Google Mapsで開く</a> <a class="detaillink" href="#hotel-zoo">📋 予約詳細</a></div>
       </div>
     </div>
   </div>
@@ -506,7 +520,7 @@
       <div class="time">21:00</div>
       <div class="body">
         <div class="title"><span class="tag stay">宿泊</span>🏨 Zoo si homestay（2泊目）就寝</div>
-        <div class="detail">Cat Cat, Sapa <span style="color:var(--text-dim)">(Agoda 1705123410)</span></div>
+        <div class="detail">Cat Cat, Sapa <span style="color:var(--text-dim)">(Agoda 1705123410)</span> <a class="detaillink" href="#hotel-zoo">📋 予約詳細</a></div>
       </div>
     </div>
   </div>
@@ -567,7 +581,7 @@
       <div class="time">22:00</div>
       <div class="body">
         <div class="title"><span class="tag move">移動</span>🚌 HK Buslines Sapa→Ninh Binh（夜行）<span class="booked">済</span></div>
-        <div class="detail">Zoo si homestay前でピックアップ → 翌朝 Ninh Binh Greenland Homestay<br>下段シングルキャビン<br>Klook予約 <span class="code">NYG979086</span> / 問合 +84 866 224 622</div>
+        <div class="detail">Zoo si homestay前でピックアップ → 翌朝 Ninh Binh Greenland Homestay<br>下段シングルキャビン<br>Klook予約 <span class="code">NYG979086</span> / 問合 +84 866 224 622<br><a class="detaillink" href="#tr-bus-ninh">📋 予約詳細</a></div>
       </div>
     </div>
   </div>
@@ -582,7 +596,7 @@
       <div class="time">06:00</div>
       <div class="body">
         <div class="title"><span class="tag move">到着</span>ニンビン着 / Ninh Binh Greenland Homestay<span class="booked">済</span></div>
-        <div class="detail">荷物預け・朝食・休憩 <span style="color:var(--text-dim)">(Agoda 1705777669)</span><br><a class="maplink" href="https://maps.google.com/?q=Ninh+Binh+Greenland+Homestay+Hoa+Lu+Ninh+Binh+Vietnam" target="_blank">📍 Google Mapsで開く</a></div>
+        <div class="detail">荷物預け・朝食・休憩 <span style="color:var(--text-dim)">(Agoda 1705777669)</span><br><a class="maplink" href="https://maps.google.com/?q=Ninh+Binh+Greenland+Homestay+Hoa+Lu+Ninh+Binh+Vietnam" target="_blank">📍 Google Mapsで開く</a> <a class="detaillink" href="#hotel-ninh">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
@@ -616,7 +630,7 @@
       <div class="time">15:00〜</div>
       <div class="body">
         <div class="title"><span class="tag stay">宿泊</span>🏨 Ninh Binh Greenland チェックイン</div>
-        <div class="detail">Khe Thuong, Hoa Lu, Ninh Binh <span style="color:var(--text-dim)">(Agoda 1705777669)</span></div>
+        <div class="detail">Khe Thuong, Hoa Lu, Ninh Binh <span style="color:var(--text-dim)">(Agoda 1705777669)</span> <a class="detaillink" href="#hotel-ninh">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
@@ -662,14 +676,14 @@
       <div class="time">13:41</div>
       <div class="body">
         <div class="title"><span class="tag move">移動</span>🚆 ベトナム国鉄 SE8 Ninh Binh→Ha Noi<span class="booked">済</span></div>
-        <div class="detail">Ninh Binh 13:41 → Ha Noi 15:41 / 3号車19番 下段6人部屋<br>dsvn.vn予約 <span class="code">VUCRQH</span> / チケット <span class="code">164273017</span><br>※パスポート必須（車掌照合）</div>
+        <div class="detail">Ninh Binh 13:41 → Ha Noi 15:41 / 3号車19番 下段6人部屋<br>dsvn.vn予約 <span class="code">VUCRQH</span> / チケット <span class="code">164273017</span><br>※パスポート必須（車掌照合）<br><a class="detaillink" href="#tr-se8">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
       <div class="time">16:00頃</div>
       <div class="body">
         <div class="title"><span class="tag stay">宿泊</span>🏨 Hanoi La Cascada House チェックイン<span class="booked">済</span></div>
-        <div class="detail">旧市街北側 / Executive Room（高層階）<span style="color:var(--text-dim)"> (Agoda 1705863170)</span><br><a class="maplink" href="https://maps.google.com/?q=Hanoi+La+Cascada+House+9+Gam+Cau+Hoan+Kiem+Hanoi" target="_blank">📍 Google Mapsで開く</a></div>
+        <div class="detail">旧市街北側 / Executive Room（高層階）<span style="color:var(--text-dim)"> (Agoda 1705863170)</span><br><a class="maplink" href="https://maps.google.com/?q=Hanoi+La+Cascada+House+9+Gam+Cau+Hoan+Kiem+Hanoi" target="_blank">📍 Google Mapsで開く</a> <a class="detaillink" href="#hotel-cascada">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
@@ -770,7 +784,7 @@
       <div class="time">23:00頃</div>
       <div class="body">
         <div class="title"><span class="tag stay">宿泊</span>🏨 New Sky Airport Hotel チェックイン<span class="booked">済</span></div>
-        <div class="detail">空港近く / Standard Double <span style="color:var(--text-dim)">(Agoda 1705868421)</span> / 翌朝06:30空港送迎（80k VND予約済）<br><a class="maplink" href="https://maps.google.com/?q=New+Sky+Airport+Hotel+Noi+Bai+Hanoi+Vietnam" target="_blank">📍 Google Mapsで開く</a></div>
+        <div class="detail">空港近く / Standard Double <span style="color:var(--text-dim)">(Agoda 1705868421)</span> / 翌朝06:30空港送迎（80k VND予約済）<br><a class="maplink" href="https://maps.google.com/?q=New+Sky+Airport+Hotel+Noi+Bai+Hanoi+Vietnam" target="_blank">📍 Google Mapsで開く</a> <a class="detaillink" href="#hotel-newsky">📋 予約詳細</a></div>
       </div>
     </div>
   </div>
@@ -792,14 +806,14 @@
       <div class="time">09:35</div>
       <div class="body">
         <div class="title"><span class="tag move">移動</span>✈️ UO541 ハノイ→香港<span class="booked">済</span></div>
-        <div class="detail">HAN T2 09:35発 → HKG 13:40着（香港時間）<br>予約 <span class="code">ZCPZ3N</span> <span style="color:var(--text-dim)">(HK Express / Expedia)</span></div>
+        <div class="detail">HAN T2 09:35発 → HKG 13:40着（香港時間）<br>予約 <span class="code">ZCPZ3N</span> <span style="color:var(--text-dim)">(HK Express / Expedia)</span><br><a class="detaillink" href="#tr-uo541">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
       <div class="time">15:15</div>
       <div class="body">
         <div class="title"><span class="tag move">移動</span>✈️ UO650 香港→成田<span class="booked">済</span></div>
-        <div class="detail">HKG T1 15:15発 → NRT 19:45着（日本時間）<span style="color:var(--text-dim)"> (HK Express / Expedia)</span></div>
+        <div class="detail">HKG T1 15:15発 → NRT 19:45着（日本時間）<span style="color:var(--text-dim)"> (HK Express / Expedia)</span><br><a class="detaillink" href="#tr-uo650">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
@@ -812,7 +826,7 @@
       <div class="time">21:30</div>
       <div class="body">
         <div class="title"><span class="tag move">移動</span>🚌 夜行バス 成田空港第2ターミナル → 仙台（JRT121）<span class="booked">済</span></div>
-        <div class="detail">成田空港第2ターミナル <strong>12番乗り場</strong> 21:30発<br>3列独立シート・トイレ付・Wi-Fi・充電・座席指定<br>座席：<strong>5C</strong> / 運行：JRバス東北 / 8,900円（楽天トラベル）</div>
+        <div class="detail">成田空港第2ターミナル <strong>12番乗り場</strong> 21:30発<br>3列独立シート・トイレ付・Wi-Fi・充電・座席指定<br>座席：<strong>5C</strong> / 運行：JRバス東北 / 8,900円（楽天トラベル）<br><a class="detaillink" href="#tr-nightbus">📋 予約詳細</a></div>
       </div>
     </div>
     <div class="event">
@@ -863,7 +877,7 @@
 <section id="hotels">
   <h2>HOTELS — 宿泊先（全4軒Agoda予約済）</h2>
 
-  <div class="booking hotel">
+  <div class="booking hotel" id="hotel-zoo">
     <h3>① Zoo si homestay <span class="num">Sapa</span><span class="booked">済</span></h3>
     <dl>
       <dt>日程</dt><dd>5/4 12:00 IN → 5/6 11:00 OUT</dd>
@@ -885,7 +899,7 @@
     <a class="maplink" href="https://maps.google.com/?q=Zoo+si+homestay+Sapa" target="_blank">📍 Google Mapsで開く</a>
   </div>
 
-  <div class="booking hotel">
+  <div class="booking hotel" id="hotel-ninh">
     <h3>② Ninh Binh Greenland Homestay <span class="num">Ninh Binh</span><span class="booked">済</span></h3>
     <dl>
       <dt>日程</dt><dd>5/7 14:00 IN → 5/8 12:00 OUT</dd>
@@ -906,7 +920,7 @@
     <a class="maplink" href="https://maps.google.com/?q=Ninh+Binh+Greenland+Homestay" target="_blank">📍 Google Mapsで開く</a>
   </div>
 
-  <div class="booking hotel">
+  <div class="booking hotel" id="hotel-cascada">
     <h3>③ Hanoi La Cascada House <span class="num">Hanoi 旧市街</span><span class="booked">済</span></h3>
     <dl>
       <dt>日程</dt><dd>5/8 14:00 IN → 5/9 12:00 OUT</dd>
@@ -926,7 +940,7 @@
     <a class="maplink" href="https://maps.google.com/?q=Hanoi+La+Cascada+House+9+Gam+Cau" target="_blank">📍 Google Mapsで開く</a>
   </div>
 
-  <div class="booking hotel">
+  <div class="booking hotel" id="hotel-newsky">
     <h3>④ New Sky Airport Hotel <span class="num">空港近く</span><span class="booked">済</span></h3>
     <dl>
       <dt>日程</dt><dd>5/9 14:00 IN → 5/10 12:00 OUT</dd>
@@ -952,7 +966,7 @@
 <section id="transport">
   <h2>TRANSPORT — 移動手段一覧</h2>
 
-  <div class="booking transport shinkansen">
+  <div class="booking transport shinkansen" id="tr-shinkansen">
     <h3>新幹線 こまち38号 <span class="num">行き</span><span class="booked">済</span></h3>
     <dl>
       <dt>区間</dt><dd>仙台 19:31 → 東京 21:04</dd>
@@ -970,7 +984,7 @@
     </div>
   </div>
 
-  <div class="booking transport flight">
+  <div class="booking transport flight" id="tr-uo629">
     <h3>UO629 羽田→香港 <span class="num">往路①</span><span class="booked">済</span></h3>
     <dl>
       <dt>日時</dt><dd>5/4 02:20発 → 06:00着（香港時間）</dd>
@@ -988,7 +1002,7 @@
     </div>
   </div>
 
-  <div class="booking transport flight">
+  <div class="booking transport flight" id="tr-uo540">
     <h3>UO540 香港→ハノイ <span class="num">往路②</span><span class="booked">済</span></h3>
     <dl>
       <dt>日時</dt><dd>5/4 07:40発（香港時間）→ 08:50着（現地時間）</dd>
@@ -1005,7 +1019,7 @@
     </div>
   </div>
 
-  <div class="booking transport bus">
+  <div class="booking transport bus" id="tr-bus-sapa">
     <h3>HK Buslines ハノイ→サパ <span class="num">VIPバス</span><span class="booked">済</span></h3>
     <dl>
       <dt>日時</dt><dd>5/4 14:00発（現地）</dd>
@@ -1026,7 +1040,7 @@
     </div>
   </div>
 
-  <div class="booking transport bus">
+  <div class="booking transport bus" id="tr-bus-ninh">
     <h3>HK Buslines サパ→ニンビン <span class="num">夜行</span><span class="booked">済</span></h3>
     <dl>
       <dt>日時</dt><dd>5/6 22:00発（現地）</dd>
@@ -1047,7 +1061,7 @@
     </div>
   </div>
 
-  <div class="booking transport train">
+  <div class="booking transport train" id="tr-se8">
     <h3>ベトナム国鉄 SE8 ニンビン→ハノイ<span class="booked">済</span></h3>
     <dl>
       <dt>日時</dt><dd>5/8 13:41発 → 15:41着</dd>
@@ -1066,7 +1080,7 @@
     </div>
   </div>
 
-  <div class="booking transport flight">
+  <div class="booking transport flight" id="tr-uo541">
     <h3>UO541 ハノイ→香港 <span class="num">復路①</span><span class="booked">済</span></h3>
     <dl>
       <dt>日時</dt><dd>5/10 09:35発 → 12:40着（香港時間）</dd>
@@ -1083,7 +1097,7 @@
     </div>
   </div>
 
-  <div class="booking transport flight">
+  <div class="booking transport flight" id="tr-uo650">
     <h3>UO650 香港→成田 <span class="num">復路②</span><span class="booked">済</span></h3>
     <dl>
       <dt>日時</dt><dd>5/10 14:15発 → 19:45着（日本時間）</dd>
@@ -1100,7 +1114,7 @@
     </div>
   </div>
 
-  <div class="booking transport bus">
+  <div class="booking transport bus" id="tr-nightbus">
     <h3>夜行バス 成田→仙台 <span class="num">帰り</span><span class="booked">済</span></h3>
     <dl>
       <dt>日時</dt><dd>5/10 21:30発 → 5/11 05:36着</dd>

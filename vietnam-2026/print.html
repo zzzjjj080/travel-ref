@@ -2,26 +2,124 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>緊急備忘録 ベトナム 2026 — NAKAMURA JIN</title>
 <style>
+/* 印刷設定 */
 @page { size: A4 portrait; margin: 12mm 14mm; }
+
+/* リセット */
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Hiragino Kaku Gothic Pro','Yu Gothic','Meiryo',sans-serif; font-size:9.5px; color:#1a1a1a; line-height:1.5; }
-h1 { font-size:15px; font-weight:900; display:flex; justify-content:space-between; align-items:baseline; border-bottom:2.5px solid #1a5276; padding-bottom:4px; margin-bottom:8px; }
-h1 span { font-size:8.5px; font-weight:400; color:#555; }
-h2 { font-size:9.5px; font-weight:700; color:#fff; background:#1a5276; padding:3px 8px; margin:8px 0 5px; letter-spacing:.05em; }
-h3 { font-size:9px; font-weight:700; color:#1a5276; margin:5px 0 2px; border-bottom:1px solid #c8d8e8; padding-bottom:1px; }
-table { width:100%; border-collapse:collapse; }
-td { padding:2px 4px; vertical-align:top; }
-td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size:8.5px; }
-.code { font-family:'Courier New',monospace; background:#edf2f7; padding:1px 5px; border-radius:2px; font-size:10px; font-weight:700; letter-spacing:.03em; }
-.warn { color:#c0392b; font-weight:700; }
-.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:0 18px; }
-.note { font-size:8px; color:#555; border-top:1px dashed #aaa; margin-top:10px; padding-top:5px; }
-.sep { border:none; border-top:1px solid #e0e0e0; margin:6px 0; }
+
+/* 画面表示（モバイル基準） */
+:root {
+  --blue:#1a5276; --bg:#f5f7fa; --card:#ffffff;
+  --text:#1a1a1a; --sub:#444; --dim:#777; --line:#dde3ec;
+  --code-bg:#edf2f7; --warn:#c0392b;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0f1117; --card:#1a1f2e; --text:#e8eaf0;
+    --sub:#aab; --dim:#667; --line:#2a3040;
+    --code-bg:#1e2636; --blue:#4a90c4; --warn:#e74c3c;
+  }
+}
+
+body {
+  font-family:'Hiragino Kaku Gothic Pro','Yu Gothic','Meiryo',sans-serif;
+  font-size:14px; color:var(--text); background:var(--bg); line-height:1.6;
+  padding:12px;
+}
+
+/* 戻るリンク（画面のみ） */
+.back-link {
+  display:inline-block; margin-bottom:12px; color:var(--blue);
+  text-decoration:none; font-size:13px;
+}
+.back-link:hover { text-decoration:underline; }
+
+/* 印刷ボタン（画面のみ） */
+.print-btn {
+  display:block; width:100%; margin-bottom:12px;
+  background:var(--blue); color:#fff; border:none;
+  padding:12px; border-radius:8px; font-size:15px; font-weight:700;
+  cursor:pointer; text-align:center;
+}
+
+h1 {
+  font-size:18px; font-weight:900;
+  border-bottom:2.5px solid var(--blue);
+  padding-bottom:6px; margin-bottom:4px;
+}
+h1 span { display:block; font-size:11px; font-weight:400; color:var(--dim); margin-top:3px; }
+
+h2 {
+  font-size:13px; font-weight:700; color:#fff;
+  background:var(--blue); padding:5px 10px;
+  margin:14px 0 8px; border-radius:4px; letter-spacing:.04em;
+}
+h3 {
+  font-size:12px; font-weight:700; color:var(--blue);
+  margin:10px 0 4px; border-bottom:1px solid var(--line); padding-bottom:3px;
+}
+
+/* グリッド：モバイルは1列、広い画面は2列 */
+.grid2 { display:grid; grid-template-columns:1fr; gap:0; }
+@media (min-width:600px){ .grid2 { grid-template-columns:1fr 1fr; gap:0 18px; } }
+
+/* テーブル */
+table { width:100%; border-collapse:collapse; margin-bottom:4px; }
+td { padding:4px 6px; vertical-align:top; border-bottom:1px solid var(--line); }
+td.lab {
+  width:110px; font-weight:600; color:var(--sub);
+  white-space:nowrap; font-size:12px; background:var(--bg);
+}
+td:last-child { font-size:13px; }
+
+/* カード風ブロック（モバイル） */
+.block {
+  background:var(--card); border-radius:8px;
+  padding:10px 12px; margin-bottom:8px;
+  border:1px solid var(--line);
+}
+
+.code {
+  font-family:'Courier New',monospace;
+  background:var(--code-bg); padding:2px 7px;
+  border-radius:3px; font-size:13px; font-weight:700;
+  letter-spacing:.03em; color:var(--text);
+}
+.warn { color:var(--warn); font-weight:700; }
+
+.note {
+  font-size:11px; color:var(--dim);
+  border-top:1px dashed var(--line);
+  margin-top:14px; padding-top:8px;
+}
+.sep { border:none; border-top:1px solid var(--line); margin:8px 0; }
+
+/* 印刷時：画面用要素を非表示、コンパクト表示 */
+@media print {
+  body { font-size:9.5px; background:#fff; color:#1a1a1a; padding:0; }
+  .back-link, .print-btn { display:none !important; }
+  h1 { font-size:15px; border-bottom:2.5px solid #1a5276; }
+  h1 span { font-size:8.5px; }
+  h2 { font-size:9.5px; background:#1a5276; padding:3px 8px; margin:8px 0 5px; border-radius:0; }
+  h3 { font-size:9px; color:#1a5276; margin:5px 0 2px; }
+  .block { background:#fff; border:none; padding:0; margin:0; }
+  .grid2 { grid-template-columns:1fr 1fr; gap:0 18px; }
+  table td { padding:2px 4px; border-bottom:1px solid #ddd; font-size:9px; }
+  td.lab { font-size:8.5px; background:#fff; }
+  .code { font-size:10px; background:#edf2f7; }
+  .note { font-size:8px; }
+  h2, .grid2, table, .block { page-break-inside:avoid; }
+}
 </style>
 </head>
 <body>
+
+<a class="back-link" href="index.html">← スケジュール詳細に戻る</a>
+<button class="print-btn" onclick="window.print()">🖨 このページを印刷する（A4）</button>
 
 <h1>海外旅行 緊急備忘録
   <span>ベトナム 2026.5.3–5.11 ／ NAKAMURA JIN ／ パスポート <strong>TT1997933</strong></span>
@@ -30,7 +128,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
 <!-- フライト -->
 <h2>✈ フライト ― 予約番号 ZCPZ3N（HK Express / Expedia 73388162027638）</h2>
 <div class="grid2">
-  <div>
+  <div class="block">
     <h3>往路 5/4（月）</h3>
     <table>
       <tr><td class="lab">HND T3 発</td><td>02:20 → <strong>UO629</strong></td></tr>
@@ -39,7 +137,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
       <tr><td class="lab">HAN T2 着</td><td><strong>08:50</strong>（現地時間）</td></tr>
     </table>
   </div>
-  <div>
+  <div class="block">
     <h3>復路 5/10（日）</h3>
     <table>
       <tr><td class="lab">HAN T2 発</td><td>09:35 → <strong>UO541</strong></td></tr>
@@ -53,7 +151,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
 <!-- バス・列車 -->
 <h2>🚌 バス / 🚆 列車 / 🎫 アクティビティ</h2>
 <div class="grid2">
-  <div>
+  <div class="block">
     <h3>HK Buslines ハノイ→サパ　5/4 14:00発</h3>
     <table>
       <tr><td class="lab">乗車場所</td><td>ノイバイ空港 国際線T1 <strong>柱01</strong></td></tr>
@@ -61,7 +159,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
       <tr><td class="lab">問合 WhatsApp</td><td>+84 979 252 622</td></tr>
     </table>
   </div>
-  <div>
+  <div class="block">
     <h3>HK Buslines サパ→ニンビン　5/6 22:00発</h3>
     <table>
       <tr><td class="lab">乗車場所</td><td>Zoo si homestay 前（ピックアップ）</td></tr>
@@ -69,7 +167,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
       <tr><td class="lab">問合 WhatsApp</td><td>+84 866 224 622</td></tr>
     </table>
   </div>
-  <div>
+  <div class="block">
     <h3>ベトナム国鉄 SE8　5/8 13:41発</h3>
     <table>
       <tr><td class="lab">区間</td><td>ニンビン → ハノイ（15:41着）</td></tr>
@@ -78,7 +176,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
       <tr><td class="lab">チケット番号</td><td><span class="code">164273017</span>　※パスポート必携</td></tr>
     </table>
   </div>
-  <div>
+  <div class="block">
     <h3>夜行バス 成田→仙台　5/10 21:30発</h3>
     <table>
       <tr><td class="lab">乗車場所</td><td>成田T2 <strong class="warn">12番乗り場</strong></td></tr>
@@ -99,7 +197,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
 <!-- 宿泊先 -->
 <h2>🏨 宿泊先</h2>
 <div class="grid2">
-  <div>
+  <div class="block">
     <h3>① Zoo si homestay（サパ）　5/4–5/6</h3>
     <table>
       <tr><td class="lab">住所</td><td>Cat Cat, Sa Pa, Lào Cai</td></tr>
@@ -108,7 +206,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
       <tr><td class="lab">連絡</td><td>vangdesapa1991@gmail.com</td></tr>
     </table>
   </div>
-  <div>
+  <div class="block">
     <h3>② Ninh Binh Greenland Homestay　5/7–5/8</h3>
     <table>
       <tr><td class="lab">住所</td><td>Khe Thuong, Hoa Lu, Ninh Binh</td></tr>
@@ -117,7 +215,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
       <tr><td class="lab">連絡</td><td>+84 374 692 699<br>bookingninhbinhhomestay@gmail.com</td></tr>
     </table>
   </div>
-  <div>
+  <div class="block">
     <h3>③ Hanoi La Cascada House　5/8–5/9</h3>
     <table>
       <tr><td class="lab">住所</td><td>9 Gam Cau, Hoan Kiem, Ha Noi</td></tr>
@@ -126,7 +224,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
       <tr><td class="lab">連絡</td><td>+84 938 181 990<br>booking@hanoilacascadahouse.com</td></tr>
     </table>
   </div>
-  <div>
+  <div class="block">
     <h3>④ New Sky Airport Hotel　5/9–5/10</h3>
     <table>
       <tr><td class="lab">住所</td><td>06 Quoc lo 2, Noi Bai, Ha Noi</td></tr>
@@ -141,7 +239,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
 <!-- 緊急連絡先 -->
 <h2>🆘 緊急連絡先</h2>
 <div class="grid2">
-  <div>
+  <div class="block">
     <h3>ベトナム現地</h3>
     <table>
       <tr><td class="lab">警察</td><td class="warn">113</td></tr>
@@ -155,7 +253,7 @@ td.lab { width:105px; font-weight:600; color:#444; white-space:nowrap; font-size
       <tr><td class="lab">三菱UFJゴールド付帯</td><td>+81-3-6272-6004（24h）</td></tr>
     </table>
   </div>
-  <div>
+  <div class="block">
     <h3>カード紛失・停止</h3>
     <table>
       <tr><td class="lab">EPOS（海外主力）</td><td>+81-3-5323-2211（コレクトコール可）</td></tr>

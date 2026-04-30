@@ -280,6 +280,37 @@
   }
   .tab.active{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:600}
 
+  /* 食べ物ランキング */
+  .food-tier-label{
+    font-size:11px;font-weight:700;letter-spacing:.1em;
+    padding:5px 10px;margin:12px 0 6px;border-radius:4px;
+    display:flex;align-items:center;gap:6px;
+  }
+  .food-tier-label.must{background:rgba(239,68,68,.15);color:#f87171}
+  .food-tier-label.rec{background:rgba(255,184,77,.12);color:var(--accent)}
+  .food-tier-label.local{background:rgba(74,222,128,.1);color:var(--ok)}
+  .food-tier-label.opt{background:rgba(96,165,250,.1);color:var(--info)}
+  .food-item{
+    display:flex;align-items:flex-start;gap:10px;
+    background:var(--card);border-radius:8px;padding:10px 12px;
+    margin-bottom:6px;border:1px solid var(--line);cursor:pointer;
+    width:100%;text-align:left;
+  }
+  .food-item:has(input:checked){opacity:.5}
+  .rank-num{
+    font-size:16px;font-weight:900;width:26px;text-align:center;
+    flex-shrink:0;color:var(--text-dim);font-variant-numeric:tabular-nums;padding-top:2px;
+  }
+  .rank-num.gold{color:#fbbf24}
+  .rank-num.silver{color:#94a3b8}
+  .rank-num.bronze{color:#cd7f32}
+  .food-body{flex:1}
+  .food-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px}
+  .food-vn{font-size:11px;color:var(--text-dim);font-weight:400;margin-left:5px;font-style:italic}
+  .food-desc{font-size:12px;color:var(--text-sub);line-height:1.5}
+  .food-spot{font-size:11px;color:var(--info);margin-top:4px}
+  .food-cb{flex-shrink:0;margin-top:4px;accent-color:var(--ok)}
+
   /* タイムラインから詳細へのジャンプリンク */
   .detaillink{
     display:inline-block;
@@ -529,6 +560,7 @@
       <div class="time">18:30〜<br>20:00</div>
       <div class="body">
         <div class="title"><span class="tag meal">食事</span>夕食（サーモン料理）</div>
+        <div class="detail">Cá hồi nướng（塩焼き）/ Lẩu cá hồi（鍋）がおすすめ / 150,000〜400,000 VND<br>候補: Delta Restaurant・Hmong Sista / またはホームステイスタッフに聞く<br><a class="detaillink" href="#foodlist">🍜 食べ物リスト（候補店）</a></div>
       </div>
     </div>
     <div class="event">
@@ -632,6 +664,7 @@
       <div class="time">10:30〜<br>12:00</div>
       <div class="body">
         <div class="title"><span class="tag meal">食事</span>昼食（ヤギ料理）</div>
+        <div class="detail">Thịt dê Ninh Bình / 炭火焼き・煮込みなど / 150,000〜250,000 VND前後<br>チャンアン出口付近または市内の「Dê núi」系食堂に入る<br><a class="detaillink" href="#foodlist">🍜 食べ物リスト</a></div>
       </div>
     </div>
     <div class="event">
@@ -712,6 +745,7 @@
       <div class="time">19:00〜<br>20:30</div>
       <div class="body">
         <div class="title"><span class="tag meal">食事</span>ローカル飯①（ブンチャー）</div>
+        <div class="detail">炭火焼き豚×甘酸っぱいつけ汁×米麺 / オバマが食べたやつ / 60,000〜80,000 VND<br>推奨: <strong>Bún chả Hương Liên</strong>（24 Lê Văn Hưu / 聖地）<br><a class="detaillink" href="#foodlist">🍜 食べ物リスト</a></div>
       </div>
     </div>
     <div class="event">
@@ -740,6 +774,7 @@
       <div class="time">07:30〜<br>09:00</div>
       <div class="body">
         <div class="title"><span class="tag meal">食事</span>ローカル飯②（Bún mọc Thủy）</div>
+        <div class="detail">豚団子・きのこ・つくねのやさしいスープ麺 / 40,000〜60,000 VND<br><a class="detaillink" href="#foodlist">🍜 食べ物リスト</a></div>
       </div>
     </div>
     <div class="event">
@@ -752,7 +787,8 @@
     <div class="event">
       <div class="time">11:00〜<br>13:00</div>
       <div class="body">
-        <div class="title"><span class="tag meal">食事</span>ローカル飯③（フォーティン）</div>
+        <div class="title"><span class="tag meal">食事</span>ローカル飯③（フォー）</div>
+        <div class="detail">牛骨あっさりスープ×米麺 / 50,000〜80,000 VND<br>推奨: <strong>Phở Thìn</strong>（13 Lò Đúc）または <strong>Phở Bát Đàn</strong>（49 Bát Đàn）<br><a class="detaillink" href="#foodlist">🍜 食べ物リスト</a></div>
       </div>
     </div>
     <div class="event">
@@ -773,12 +809,14 @@
       <div class="time">16:00〜<br>18:00</div>
       <div class="body">
         <div class="title"><span class="tag meal">食事</span>エッグコーヒー</div>
+        <div class="detail">卵黄×コンデンスミルク泡クリーム×コーヒー / ホットがおすすめ / 30,000〜50,000 VND<br>推奨: <strong>Café Giảng</strong>（39 Nguyễn Hữu Huân / 1946年創業の元祖）<br><a class="detaillink" href="#foodlist">🍜 食べ物リスト</a></div>
       </div>
     </div>
     <div class="event">
       <div class="time">18:00〜<br>20:00</div>
       <div class="body">
         <div class="title"><span class="tag meal">食事</span>ローカル飯④（チャーカー）</div>
+        <div class="detail">白身魚のターメリック＆ディル炒め / テーブル鉄板で自分で炒めるスタイル / 150,000〜250,000 VND<br>推奨: <strong>Chả cá Thăng Long</strong>（21 Đường Thành）<br><a class="detaillink" href="#foodlist">🍜 食べ物リスト</a></div>
       </div>
     </div>
     <div class="event">
@@ -1306,37 +1344,194 @@
   </div>
 </section>
 
-<!-- 食べ物チェックリスト -->
+<!-- 食べ物ランキング -->
 <section id="foodlist">
-  <h2>FOOD — ベトナムで絶対食うもの</h2>
+  <h2>FOOD — ベトナム飯ランキング</h2>
+  <div style="font-size:11px;color:var(--text-dim);margin-bottom:10px">食べたらチェック ✓ / 優先度順</div>
 
-  <div class="card" style="margin-bottom:10px">
-    <div style="padding:10px 14px 4px;font-size:11px;font-weight:700;color:var(--text-dim);letter-spacing:.1em">HANOI 定番</div>
-    <div class="checklist" style="padding:6px 14px 12px">
-      <label class="check-item"><input type="checkbox"> 🍜 フォー（Phở）― ハノイスタイルはあっさり牛骨スープ</label>
-      <label class="check-item"><input type="checkbox"> 🥩 ブンチャー（Bún chả）― 炭火焼き豚×つけ汁×春巻き。ハノイ名物</label>
-      <label class="check-item"><input type="checkbox"> 🐟 チャーカー（Chả cá）― 魚のターメリック炒め。ハノイ旧市街発祥</label>
-      <label class="check-item"><input type="checkbox"> 🥟 バインクオン（Bánh cuốn）― 蒸し米粉ロール。朝食の定番</label>
-      <label class="check-item"><input type="checkbox"> 🍳 バインミー（Bánh mì）― フランスパン×具だくさん。どこでも買える</label>
-      <label class="check-item"><input type="checkbox"> 🍵 エッグコーヒー（Cà phê trứng）― 卵黄×コンデンスミルク。ハノイ発祥</label>
-      <label class="check-item"><input type="checkbox"> 🍺 ビアホイ（Bia hơi）― 路上生ビール。1杯10,000〜20,000 VND。タヒエン通り</label>
-      <label class="check-item"><input type="checkbox"> 🌿 ブン・ダウ・マム・トム（Bún đậu mắm tôm）― 豆腐×エビ味噌。においが強烈だが旨い</label>
-      <label class="check-item"><input type="checkbox"> 🍲 ブン・モック（Bún mọc）― 豚団子×きのこのスープ麺。やさしい味</label>
+  <!-- 🔥 絶対食え -->
+  <div class="food-tier-label must">🔥 絶対食え ― まずここから</div>
+
+  <label class="food-item">
+    <span class="rank-num gold">1</span>
+    <div class="food-body">
+      <div class="food-name">🥖 バインミー <span class="food-vn">Bánh mì</span></div>
+      <div class="food-desc">フランスパン×パテ×ハム×野菜×ハーブ。20,000〜50,000 VND。朝でも昼でも深夜でもうまい。どこの街でも買える最強フード</div>
+      <div class="food-spot">📍 どこでも即買い可 / ハノイ旧市街の屋台・パン屋で毎日食える</div>
     </div>
+    <input type="checkbox" class="food-cb">
+  </label>
 
-    <div style="padding:6px 14px 4px;font-size:11px;font-weight:700;color:var(--text-dim);letter-spacing:.1em;border-top:1px solid var(--line)">SAPA 特産</div>
-    <div class="checklist" style="padding:6px 14px 12px">
-      <label class="check-item"><input type="checkbox"> 🐟 サパサーモン（Cá hồi）― 山岳養殖のサーモン・マス。鮮度抜群</label>
-      <label class="check-item"><input type="checkbox"> 🐐 ヤギ料理（Thịt dê）― ニンビン名物。炭火焼き・鍋など</label>
-      <label class="check-item"><input type="checkbox"> 🍖 黒豚の炭火焼き（Thịt lợn cắp nách）― 少数民族料理。シンプルで旨い</label>
-      <label class="check-item"><input type="checkbox"> 🌽 コム・ラム（Cơm lam）― 竹筒ごはん。サパの屋台定番</label>
+  <label class="food-item">
+    <span class="rank-num gold">2</span>
+    <div class="food-body">
+      <div class="food-name">🍺 ビアホイ <span class="food-vn">Bia hơi</span></div>
+      <div class="food-desc">路上プラ椅子で飲む新鮮な生ビール。1杯10,000〜20,000 VND（約60〜120円）。ローカルのおっさんと肩並べて「モッ・ハイ・バー・ヨー！」で乾杯する体験が最高</div>
+      <div class="food-spot">📍 タヒエン通り（Phố Tạ Hiện）ハノイ旧市街のビール通り → 5/8夜・5/9夜に予定</div>
     </div>
+    <input type="checkbox" class="food-cb">
+  </label>
 
-    <div style="padding:6px 14px 4px;font-size:11px;font-weight:700;color:var(--text-dim);letter-spacing:.1em;border-top:1px solid var(--line)">デザート・ドリンク</div>
-    <div class="checklist" style="padding:6px 14px 12px">
-      <label class="check-item"><input type="checkbox"> 🧋 チェー（Chè）― ベトナムスイーツ。豆・ゼリー・ミルクの甘デザート</label>
-      <label class="check-item"><input type="checkbox"> 🥤 シントー（Sinh tố）― フルーツスムージー。マンゴー・アボカドが人気</label>
-      <label class="check-item"><input type="checkbox"> ☕ コンデンスミルクコーヒー（Cà phê sữa đá）― ベトナムアイスコーヒーの基本</label>
+  <label class="food-item">
+    <span class="rank-num gold">3</span>
+    <div class="food-body">
+      <div class="food-name">🥩 ブンチャー <span class="food-vn">Bún chả</span></div>
+      <div class="food-desc">炭火焼き豚バラ×甘酸っぱいつけ汁×米麺×揚げ春巻き。オバマ大統領がアンソニー・ボーデインと食べて世界的に有名になったハノイ名物。ランチの定番</div>
+      <div class="food-spot">📍 5/8昼食に予定済 / Bún chả Hương Liên（Đặng Văn Ngữ）が聖地</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <!-- ⭐ ハノイで食え -->
+  <div class="food-tier-label rec">⭐ ハノイで食え</div>
+
+  <label class="food-item">
+    <span class="rank-num silver">4</span>
+    <div class="food-body">
+      <div class="food-name">🐟 チャーカー <span class="food-vn">Chả cá Lã Vọng</span></div>
+      <div class="food-desc">白身魚（ナマズ）のターメリック＆ディル炒め。ハノイ旧市街150年の名物。テーブルの鉄板で自分で炒めながら食べるスタイル。強烈な香りが癖になる</div>
+      <div class="food-spot">📍 5/9夜に予定済 / Chả cá Thăng Long（旧市街）推奨</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num silver">5</span>
+    <div class="food-body">
+      <div class="food-name">🍜 フォー <span class="food-vn">Phở bò</span></div>
+      <div class="food-desc">牛骨澄んだスープ×米麺×薄切り牛肉。ハノイ式はあっさり深み系でホーチミンとは別物。朝6〜9時に食べるのが現地流</div>
+      <div class="food-spot">📍 5/9朝食に予定済 / Phở Thìn・Phở Bát Đàn が有名どころ</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num silver">6</span>
+    <div class="food-body">
+      <div class="food-name">🍵 エッグコーヒー <span class="food-vn">Cà phê trứng</span></div>
+      <div class="food-desc">卵黄＋コンデンスミルクを泡立てたクリームをコーヒーの上に乗せたハノイ発明の飲み物。ホットがおすすめ。甘くてコクがあってデザート感覚</div>
+      <div class="food-spot">📍 5/9午後に予定済 / Café Giảng（旧市街）が元祖・1946年創業</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num silver">7</span>
+    <div class="food-body">
+      <div class="food-name">🥟 バインクオン <span class="food-vn">Bánh cuốn</span></div>
+      <div class="food-desc">薄い米粉の皮でひき肉・きくらげを包んだ蒸しロール。朝食の定番。もちもちの食感とヌクチャムが絶品。軽くて胃に優しい</div>
+      <div class="food-spot">📍 ハノイ旧市街の朝食専門店 / 朝6〜9時に営業</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <!-- 🏔 サパで食え -->
+  <div class="food-tier-label local">🏔 サパで食え</div>
+
+  <label class="food-item">
+    <span class="rank-num bronze">8</span>
+    <div class="food-body">
+      <div class="food-name">🐟 サパサーモン <span class="food-vn">Cá hồi Sa Pa</span></div>
+      <div class="food-desc">標高1,500mの冷水山岳養殖場で育った鮮度抜群のサーモン・マス。塩焼き（nướng）・しゃぶしゃぶ（lẩu）・刺身風も。ここでしか食えない</div>
+      <div class="food-spot">📍 5/5夕食に予定済 → 下の候補店参照</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num bronze">9</span>
+    <div class="food-body">
+      <div class="food-name">🍖 黒豚の炭火焼き <span class="food-vn">Thịt lợn cắp nách</span></div>
+      <div class="food-desc">サパ周辺の少数民族が育てた小型黒豚の串焼き。皮パリパリ・中ジューシー。シンプルな塩味で肉の旨みが出る。1串15,000〜30,000 VND</div>
+      <div class="food-spot">📍 サパ市街ナイトマーケット・屋台</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num bronze">10</span>
+    <div class="food-body">
+      <div class="food-name">🌽 竹筒ごはん <span class="food-vn">Cơm lam</span></div>
+      <div class="food-desc">もち米を竹の筒に詰めて直火で焼いたサパ名物。竹の香りがついてもちもち。1本10,000〜20,000 VND。歩きながら食える</div>
+      <div class="food-spot">📍 サパ市街ナイトマーケット・屋台</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <!-- 🌾 ニンビンで食え -->
+  <div class="food-tier-label" style="background:rgba(251,191,36,.1);color:var(--warn)">🌾 ニンビンで食え</div>
+
+  <label class="food-item">
+    <span class="rank-num" style="color:var(--warn)">11</span>
+    <div class="food-body">
+      <div class="food-name">🐐 ヤギ料理 <span class="food-vn">Thịt dê Ninh Bình</span></div>
+      <div class="food-desc">ニンビンの名物。炭火焼き・煮込み・炒めなど多彩。臭みが少なくクセになる旨さ。地元食堂で食べれば安くてうまい（150,000〜250,000 VND/人）</div>
+      <div class="food-spot">📍 5/7昼食に予定済 / ニンビン市内の「Dê núi」系食堂</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <!-- 💡 余裕あれば -->
+  <div class="food-tier-label opt">💡 余裕あれば</div>
+
+  <label class="food-item">
+    <span class="rank-num">12</span>
+    <div class="food-body">
+      <div class="food-name">🌿 ブン・ダウ・マム・トム <span class="food-vn">Bún đậu mắm tôm</span></div>
+      <div class="food-desc">豆腐・揚げ春巻き・豚をエビ味噌ディップで食べる。においが強烈だがハマる人続出。チャレンジ枠</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num">13</span>
+    <div class="food-body">
+      <div class="food-name">🍲 ブン・モック <span class="food-vn">Bún mọc Thủy</span></div>
+      <div class="food-desc">豚団子・きのこ・つくねのやさしいスープ麺。5/9朝食に予定済</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num">14</span>
+    <div class="food-body">
+      <div class="food-name">🧋 チェー <span class="food-vn">Chè</span></div>
+      <div class="food-desc">豆・ゼリー・タピオカ・フルーツ×甘いシロップのデザートドリンク。暑い時の一杯</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num">15</span>
+    <div class="food-body">
+      <div class="food-name">☕ コンデンスミルクコーヒー <span class="food-vn">Cà phê sữa đá</span></div>
+      <div class="food-desc">Phinフィルターでゆっくり落としたコーヒー×コンデンスミルク×大量の氷。甘くて濃い。カフェイン強烈</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <!-- サパサーモン候補店 -->
+  <div style="margin-top:16px;font-size:11px;font-weight:700;color:var(--text-dim);letter-spacing:.1em;margin-bottom:8px">🐟 5/5 夕食 サパサーモン候補店</div>
+  <div class="booking" style="border-left-color:var(--ok)">
+    <h3>サーモンレストラン選び方</h3>
+    <dl>
+      <dt>エリア</dt><dd>サパ市街 Cầu Mây通り（ゴールデンロード）沿いに専門店が集中</dd>
+      <dt>メニュー必注</dt><dd>Cá hồi nướng（塩焼き）/ Lẩu cá hồi（サーモン鍋）/ Gỏi cá hồi（サラダ）</dd>
+      <dt>目安予算</dt><dd>150,000〜400,000 VND / 人</dd>
+    </dl>
+    <div style="margin-top:10px;font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px">候補3店</div>
+    <dl>
+      <dt>① Delta Restaurant</dt><dd>Cầu Mây通り / 観光客に人気・英語メニューあり</dd>
+      <dt>② Hmong Sista</dt><dd>少数民族運営・地元感あり・サーモン各種そろう</dd>
+      <dt>③ Zoo si homestay に聞く</dt><dd>「サーモン食べたい、近くのいい店は？」→ スタッフのローカル情報が最強</dd>
+    </dl>
+    <div class="ref-app" style="margin-top:10px">
+      <span class="ref-app-icon">🗺</span>
+      <div class="ref-app-body">
+        <div class="ref-app-label">Google Mapsで探す</div>
+        <div class="ref-app-main">「cá hồi Sa Pa」で検索</div>
+        <div class="ref-app-step">レビュー数・営業時間をその場で確認するのが確実</div>
+      </div>
     </div>
   </div>
 </section>

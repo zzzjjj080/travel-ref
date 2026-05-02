@@ -359,6 +359,39 @@
     margin-left:5px;vertical-align:middle;
   }
 
+  /* 両替・チップガイド */
+  .money-h3{
+    font-size:11px;font-weight:700;color:var(--text-sub);
+    margin:16px 0 7px;display:flex;align-items:center;gap:6px;
+  }
+  .tip-cat-label{
+    font-size:10px;font-weight:700;letter-spacing:.1em;
+    padding:4px 8px;border-radius:4px;margin-bottom:6px;
+  }
+  .tip-cat-label.must{background:rgba(239,68,68,.14);color:#f87171}
+  .tip-cat-label.rec{background:rgba(255,184,77,.12);color:var(--accent)}
+  .tip-cat-label.none{background:rgba(107,116,128,.12);color:var(--text-dim)}
+  .tip-list{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+  .tip-item{
+    background:var(--card);border-radius:8px;padding:9px 12px;
+    border:1px solid var(--line);
+  }
+  .tip-item .tip-where{font-size:12px;font-weight:700;color:var(--text);margin-bottom:2px}
+  .tip-item .tip-amt{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:2px}
+  .tip-item .tip-note{font-size:11px;color:var(--text-sub)}
+  .cash-table-grid{
+    background:var(--card);border-radius:10px;padding:12px;
+    font-size:12px;border:1px solid var(--line);margin-bottom:10px;
+  }
+  .cash-row{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    padding:6px 0;border-bottom:1px solid var(--line);gap:8px;
+  }
+  .cash-row:last-child{border-bottom:none}
+  .cash-row .c-label{color:var(--text-sub);flex:0 0 120px}
+  .cash-row .c-val{color:var(--text);text-align:right;font-weight:600;flex:1}
+  .cash-row .c-val.dong{color:var(--accent);font-variant-numeric:tabular-nums}
+
   /* 直近日程ハイライト */
   .day-highlight{
     border-color:var(--accent);
@@ -384,6 +417,7 @@
   <a href="#timeline">🗓 旅程</a>
   <a href="#emergency">🆘 緊急</a>
   <a href="#local">🇻🇳 現地情報</a>
+  <a href="#money">💴 両替・チップ</a>
   <a href="#herbspa">🛁 薬草風呂</a>
   <a href="#foodlist">🍜 飯チェック</a>
   <a href="#checklist">✅ 出発前</a>
@@ -1591,6 +1625,138 @@
   </div>
 </section>
 
+<!-- 両替・チップガイド -->
+<section id="money">
+  <h2>MONEY &amp; TIPS — 両替・チップガイド</h2>
+
+  <!-- 両替計画 -->
+  <h3 class="money-h3">💴 両替計画</h3>
+  <div class="booking" style="border-left-color:var(--warn)">
+    <dl>
+      <dt>両替額</dt>
+      <dd><strong>¥20,000 のみ</strong><br><span style="color:var(--text-dim)">往復両替による手数料損失：約¥1,300見込み</span></dd>
+      <dt>場所・時刻</dt>
+      <dd><strong>5/4 08:50〜 ノイバイ国際空港</strong> 両替所<br>入国審査→手荷物受取後すぐ</dd>
+      <dt>受取内訳</dt>
+      <dd>約 <strong>3,300,000 VND</strong>（レート 160 VND/¥ × 手数料込み）<br>目標：10,000 VND券 200〜250枚 + 5,000 VND券 20〜30枚</dd>
+      <dt>申し出</dt>
+      <dd>「細かい札でお願いします。10,000 VND札を多めで」<br><em style="color:var(--text-dim)">Please give me smaller notes. Many 10,000 VND notes, please.</em></dd>
+      <dt>逆両替</dt>
+      <dd><strong>5/10 出発前</strong>、ハノイ旧市街の銀行 or ホテル近くの両替所<br><span style="color:var(--text-dim)">※空港は手数料高め。余った VND は Grab で使い切る方法もあり</span></dd>
+    </dl>
+  </div>
+
+  <!-- チップガイド -->
+  <h3 class="money-h3">🤝 チップガイド</h3>
+
+  <div class="tip-cat-label must">▲ 必ず払う</div>
+  <div class="tip-list">
+    <div class="tip-item">
+      <div class="tip-where">ツアーガイド（ラオチャイ・ムア洞窟など）</div>
+      <div class="tip-amt">50,000〜100,000 VND <span style="color:var(--text-dim);font-size:11px;font-weight:400">（¥300〜600）</span></div>
+      <div class="tip-note">ガイドが案内してくれた場合、終了時に手渡す</div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-where">チャンアン川下り ボート乗員</div>
+      <div class="tip-amt">20,000〜50,000 VND <span style="color:var(--text-dim);font-size:11px;font-weight:400">（¥120〜300）</span></div>
+      <div class="tip-note">乗船後、乗員に手渡す</div>
+    </div>
+  </div>
+
+  <div class="tip-cat-label rec">◎ あると親切</div>
+  <div class="tip-list">
+    <div class="tip-item">
+      <div class="tip-where">高級レストラン（ブンチャー・チャーカー等）</div>
+      <div class="tip-amt">請求額の 5〜10%、または 10,000〜20,000 VND</div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-where">ホテルスタッフ（荷物を運んでくれた場合）</div>
+      <div class="tip-amt">10,000〜20,000 VND</div>
+      <div class="tip-note">サービス終了時に手渡す</div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-where">マッサージ・スパ（薬草風呂など）</div>
+      <div class="tip-amt">10,000〜50,000 VND</div>
+      <div class="tip-note">終了時に手渡す</div>
+    </div>
+  </div>
+
+  <div class="tip-cat-label none">✕ チップ不要</div>
+  <div class="tip-list">
+    <div class="tip-item" style="opacity:.6">
+      <div class="tip-where" style="color:var(--text-sub)">屋台・食堂（フォー・バインミー等）</div>
+      <div class="tip-note">チップ不要</div>
+    </div>
+    <div class="tip-item" style="opacity:.6">
+      <div class="tip-where" style="color:var(--text-sub)">Grab ドライバー</div>
+      <div class="tip-note">クレカ払いなら不要</div>
+    </div>
+    <div class="tip-item" style="opacity:.6">
+      <div class="tip-where" style="color:var(--text-sub)">ホテルチェックイン・チェックアウト</div>
+      <div class="tip-note">不要</div>
+    </div>
+  </div>
+
+  <!-- 推定チップ支出 -->
+  <h3 class="money-h3">📊 推定チップ支出（旅程別）</h3>
+  <div class="cash-table-grid">
+    <div class="cash-row">
+      <span class="c-label">5/5 トレッキング</span>
+      <span class="c-val dong">50,000 VND<br><span style="color:var(--text-dim);font-size:11px;font-weight:400">ガイド付く確率 50%</span></span>
+    </div>
+    <div class="cash-row">
+      <span class="c-label">5/7 チャンアン</span>
+      <span class="c-val dong">30,000 VND<br><span style="color:var(--text-dim);font-size:11px;font-weight:400">ほぼ必須</span></span>
+    </div>
+    <div class="cash-row">
+      <span class="c-label">5/7 ムア洞窟</span>
+      <span class="c-val dong">40,000 VND<br><span style="color:var(--text-dim);font-size:11px;font-weight:400">ガイド付く確率 30%</span></span>
+    </div>
+    <div class="cash-row">
+      <span class="c-label">5/8 ブンチャー</span>
+      <span class="c-val dong">8,000 VND</span>
+    </div>
+    <div class="cash-row" style="padding-top:10px">
+      <span class="c-label" style="color:var(--text);font-weight:700">総推定チップ</span>
+      <span class="c-val" style="color:var(--ok)">¥500〜1,000<br><span style="font-size:11px;color:var(--accent)">100,000〜180,000 VND</span></span>
+    </div>
+  </div>
+
+  <!-- 現金管理表 -->
+  <h3 class="money-h3">💵 現金管理表</h3>
+  <div class="cash-table-grid">
+    <div class="cash-row">
+      <span class="c-label">5/4 両替後</span>
+      <span class="c-val dong">＋3,300,000 VND</span>
+    </div>
+    <div class="cash-row">
+      <span class="c-label">宿泊 現地払い</span>
+      <span class="c-val dong">−1,166,400 VND</span>
+    </div>
+    <div class="cash-row">
+      <span class="c-label">食事・屋台</span>
+      <span class="c-val dong">−600,000〜800,000 VND</span>
+    </div>
+    <div class="cash-row">
+      <span class="c-label">チップ</span>
+      <span class="c-val dong">−100,000〜180,000 VND</span>
+    </div>
+    <div class="cash-row">
+      <span class="c-label">入場料など</span>
+      <span class="c-val dong">−200,000 VND</span>
+    </div>
+    <div class="cash-row" style="padding-top:10px">
+      <span class="c-label" style="color:var(--text);font-weight:700">5/9 残余見込み</span>
+      <span class="c-val dong">約 200,000〜400,000 VND</span>
+    </div>
+    <div class="cash-row">
+      <span class="c-label" style="color:var(--text);font-weight:700">逆両替</span>
+      <span class="c-val" style="color:var(--ok)">5/10 出発前<br><span style="font-size:11px;color:var(--text-sub);font-weight:400">旧市街の銀行で日本円に戻す<br>または Grab で使い切る</span></span>
+    </div>
+  </div>
+
+</section>
+
 <!-- 薬草風呂候補 -->
 <section id="herbspa">
   <h2>HERB SPA — サパ薬草風呂 候補</h2>
@@ -1862,7 +2028,7 @@
   <div style="margin-top:10px">
     <a href="print.html" style="display:inline-block;background:#1a5276;color:#fff;padding:8px 18px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:700;">🖨 印刷用 緊急備忘録を開く</a>
   </div>
-  <div style="margin-top:8px;font-size:11px;color:var(--text-dim)">最終更新：2026.5.1</div>
+  <div style="margin-top:8px;font-size:11px;color:var(--text-dim)">最終更新：2026.5.2</div>
 </footer>
 
 <script>

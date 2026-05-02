@@ -311,8 +311,13 @@
   .rank-num.silver{color:#94a3b8}
   .rank-num.bronze{color:#cd7f32}
   .food-body{flex:1}
-  .food-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px}
+  .food-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px}
   .food-vn{font-size:11px;color:var(--text-dim);font-weight:400;margin-left:5px;font-style:italic}
+  .food-vn-big{
+    font-size:26px;font-weight:700;color:var(--text);
+    margin:4px 0 5px;line-height:1.2;letter-spacing:.01em;
+  }
+  .food-vn-note{font-size:10px;color:var(--text-dim);margin-bottom:4px;letter-spacing:.05em}
   .food-desc{font-size:12px;color:var(--text-sub);line-height:1.5}
   .food-spot{font-size:11px;color:var(--info);margin-top:4px}
   .food-cb{flex-shrink:0;margin-top:4px;accent-color:var(--ok)}
@@ -1809,7 +1814,7 @@
 <!-- 食べ物ランキング -->
 <section id="foodlist">
   <h2>FOOD — ベトナム飯ランキング</h2>
-  <div style="font-size:11px;color:var(--text-dim);margin-bottom:10px">食べたらチェック ✓ / 優先度順</div>
+  <div style="font-size:11px;color:var(--text-dim);margin-bottom:10px">食べたらチェック ✓ / 優先度順 / ベトナム語を現地の人に見せて注文できます</div>
 
   <!-- 🔥 絶対食え -->
   <div class="food-tier-label must">🔥 絶対食え ― まずここから</div>
@@ -1817,7 +1822,9 @@
   <label class="food-item">
     <span class="rank-num gold">1</span>
     <div class="food-body">
-      <div class="food-name">🥖 バインミー <span class="food-vn">Bánh mì</span></div>
+      <div class="food-name">🥖 バインミー</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Bánh mì</div>
       <div class="food-desc">フランスパン×パテ×ハム×野菜×ハーブ。20,000〜50,000 VND。朝でも昼でも深夜でもうまい。どこの街でも買える最強フード</div>
       <div class="food-spot">📍 どこでも即買い可 / ハノイ旧市街の屋台・パン屋で毎日食える</div>
     </div>
@@ -1827,7 +1834,9 @@
   <label class="food-item">
     <span class="rank-num gold">2</span>
     <div class="food-body">
-      <div class="food-name">🍺 ビアホイ <span class="food-vn">Bia hơi</span></div>
+      <div class="food-name">🍺 ビアホイ</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Bia hơi</div>
       <div class="food-desc">路上プラ椅子で飲む新鮮な生ビール。1杯10,000〜20,000 VND（約60〜120円）。ローカルのおっさんと肩並べて「モッ・ハイ・バー・ヨー！」で乾杯する体験が最高</div>
       <div class="food-spot">📍 タヒエン通り（Phố Tạ Hiện）ハノイ旧市街のビール通り → 5/8夜・5/9夜に予定</div>
     </div>
@@ -1837,63 +1846,24 @@
   <label class="food-item">
     <span class="rank-num gold">3</span>
     <div class="food-body">
-      <div class="food-name">🥩 ブンチャー <span class="food-vn">Bún chả</span></div>
+      <div class="food-name">🥩 ブンチャー</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Bún chả</div>
       <div class="food-desc">炭火焼き豚バラ×甘酸っぱいつけ汁×米麺×揚げ春巻き。オバマ大統領がアンソニー・ボーデインと食べて世界的に有名になったハノイ名物。ランチの定番</div>
       <div class="food-spot">📍 5/8昼食に予定済 / Bún chả Hương Liên（Đặng Văn Ngữ）が聖地</div>
     </div>
     <input type="checkbox" class="food-cb">
   </label>
 
-  <!-- ⭐ ハノイで食え -->
-  <div class="food-tier-label rec">⭐ ハノイで食え</div>
-
-  <label class="food-item">
-    <span class="rank-num silver">4</span>
-    <div class="food-body">
-      <div class="food-name">🐟 チャーカー <span class="food-vn">Chả cá Lã Vọng</span></div>
-      <div class="food-desc">白身魚（ナマズ）のターメリック＆ディル炒め。ハノイ旧市街150年の名物。テーブルの鉄板で自分で炒めながら食べるスタイル。強烈な香りが癖になる</div>
-      <div class="food-spot">📍 5/9夜に予定済 / Chả cá Thăng Long（旧市街）推奨</div>
-    </div>
-    <input type="checkbox" class="food-cb">
-  </label>
-
-  <label class="food-item">
-    <span class="rank-num silver">5</span>
-    <div class="food-body">
-      <div class="food-name">🍜 フォー <span class="food-vn">Phở bò</span></div>
-      <div class="food-desc">牛骨澄んだスープ×米麺×薄切り牛肉。ハノイ式はあっさり深み系でホーチミンとは別物。朝6〜9時に食べるのが現地流</div>
-      <div class="food-spot">📍 5/9朝食に予定済 / Phở Thìn・Phở Bát Đàn が有名どころ</div>
-    </div>
-    <input type="checkbox" class="food-cb">
-  </label>
-
-  <label class="food-item">
-    <span class="rank-num silver">6</span>
-    <div class="food-body">
-      <div class="food-name">🍵 エッグコーヒー <span class="food-vn">Cà phê trứng</span></div>
-      <div class="food-desc">卵黄＋コンデンスミルクを泡立てたクリームをコーヒーの上に乗せたハノイ発明の飲み物。ホットがおすすめ。甘くてコクがあってデザート感覚</div>
-      <div class="food-spot">📍 5/9午後に予定済 / Café Giảng（旧市街）が元祖・1946年創業</div>
-    </div>
-    <input type="checkbox" class="food-cb">
-  </label>
-
-  <label class="food-item">
-    <span class="rank-num silver">7</span>
-    <div class="food-body">
-      <div class="food-name">🥟 バインクオン <span class="food-vn">Bánh cuốn</span></div>
-      <div class="food-desc">薄い米粉の皮でひき肉・きくらげを包んだ蒸しロール。朝食の定番。もちもちの食感とヌクチャムが絶品。軽くて胃に優しい</div>
-      <div class="food-spot">📍 ハノイ旧市街の朝食専門店 / 朝6〜9時に営業</div>
-    </div>
-    <input type="checkbox" class="food-cb">
-  </label>
-
   <!-- 🏔 サパで食え -->
-  <div class="food-tier-label local">🏔 サパで食え</div>
+  <div class="food-tier-label local">🏔 サパで食え（5/4〜5/6）</div>
 
   <label class="food-item">
-    <span class="rank-num bronze">8</span>
+    <span class="rank-num bronze">4</span>
     <div class="food-body">
-      <div class="food-name">🐟 サパサーモン <span class="food-vn">Cá hồi Sa Pa</span></div>
+      <div class="food-name">🐟 サパサーモン</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Cá hồi Sa Pa</div>
       <div class="food-desc">標高1,500mの冷水山岳養殖場で育った鮮度抜群のサーモン・マス。塩焼き（nướng）・しゃぶしゃぶ（lẩu）・刺身風も。ここでしか食えない</div>
       <div class="food-spot">📍 5/5夕食に予定済 → 下の候補店参照</div>
     </div>
@@ -1901,9 +1871,11 @@
   </label>
 
   <label class="food-item">
-    <span class="rank-num bronze">9</span>
+    <span class="rank-num bronze">5</span>
     <div class="food-body">
-      <div class="food-name">🍖 黒豚の炭火焼き <span class="food-vn">Thịt lợn cắp nách</span></div>
+      <div class="food-name">🍖 黒豚の炭火焼き</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Thịt lợn cắp nách</div>
       <div class="food-desc">サパ周辺の少数民族が育てた小型黒豚の串焼き。皮パリパリ・中ジューシー。シンプルな塩味で肉の旨みが出る。1串15,000〜30,000 VND</div>
       <div class="food-spot">📍 サパ市街ナイトマーケット・屋台</div>
     </div>
@@ -1911,9 +1883,11 @@
   </label>
 
   <label class="food-item">
-    <span class="rank-num bronze">10</span>
+    <span class="rank-num bronze">6</span>
     <div class="food-body">
-      <div class="food-name">🌽 竹筒ごはん <span class="food-vn">Cơm lam</span></div>
+      <div class="food-name">🌽 竹筒ごはん</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Cơm lam</div>
       <div class="food-desc">もち米を竹の筒に詰めて直火で焼いたサパ名物。竹の香りがついてもちもち。1本10,000〜20,000 VND。歩きながら食える</div>
       <div class="food-spot">📍 サパ市街ナイトマーケット・屋台</div>
     </div>
@@ -1921,14 +1895,67 @@
   </label>
 
   <!-- 🌾 ニンビンで食え -->
-  <div class="food-tier-label" style="background:rgba(251,191,36,.1);color:var(--warn)">🌾 ニンビンで食え</div>
+  <div class="food-tier-label" style="background:rgba(251,191,36,.1);color:var(--warn)">🌾 ニンビンで食え（5/7）</div>
 
   <label class="food-item">
-    <span class="rank-num" style="color:var(--warn)">11</span>
+    <span class="rank-num" style="color:var(--warn)">7</span>
     <div class="food-body">
-      <div class="food-name">🐐 ヤギ料理 <span class="food-vn">Thịt dê Ninh Bình</span></div>
+      <div class="food-name">🐐 ヤギ料理</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Thịt dê Ninh Bình</div>
       <div class="food-desc">ニンビンの名物。炭火焼き・煮込み・炒めなど多彩。臭みが少なくクセになる旨さ。地元食堂で食べれば安くてうまい（150,000〜250,000 VND/人）</div>
       <div class="food-spot">📍 5/7昼食に予定済 / ニンビン市内の「Dê núi」系食堂</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <!-- ⭐ ハノイで食え -->
+  <div class="food-tier-label rec">⭐ ハノイで食え（5/8〜5/9）</div>
+
+  <label class="food-item">
+    <span class="rank-num silver">8</span>
+    <div class="food-body">
+      <div class="food-name">🐟 チャーカー</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Chả cá Lã Vọng</div>
+      <div class="food-desc">白身魚（ナマズ）のターメリック＆ディル炒め。ハノイ旧市街150年の名物。テーブルの鉄板で自分で炒めながら食べるスタイル。強烈な香りが癖になる</div>
+      <div class="food-spot">📍 5/9夜に予定済 / Chả cá Thăng Long（旧市街）推奨</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num silver">9</span>
+    <div class="food-body">
+      <div class="food-name">🍜 フォー</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Phở bò</div>
+      <div class="food-desc">牛骨澄んだスープ×米麺×薄切り牛肉。ハノイ式はあっさり深み系でホーチミンとは別物。朝6〜9時に食べるのが現地流</div>
+      <div class="food-spot">📍 5/9朝食に予定済 / Phở Thìn・Phở Bát Đàn が有名どころ</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num silver">10</span>
+    <div class="food-body">
+      <div class="food-name">🍵 エッグコーヒー</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Cà phê trứng</div>
+      <div class="food-desc">卵黄＋コンデンスミルクを泡立てたクリームをコーヒーの上に乗せたハノイ発明の飲み物。ホットがおすすめ。甘くてコクがあってデザート感覚</div>
+      <div class="food-spot">📍 5/9午後に予定済 / Café Giảng（旧市街）が元祖・1946年創業</div>
+    </div>
+    <input type="checkbox" class="food-cb">
+  </label>
+
+  <label class="food-item">
+    <span class="rank-num silver">11</span>
+    <div class="food-body">
+      <div class="food-name">🥟 バインクオン</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Bánh cuốn</div>
+      <div class="food-desc">薄い米粉の皮でひき肉・きくらげを包んだ蒸しロール。朝食の定番。もちもちの食感とヌクチャムが絶品。軽くて胃に優しい</div>
+      <div class="food-spot">📍 ハノイ旧市街の朝食専門店 / 朝6〜9時に営業</div>
     </div>
     <input type="checkbox" class="food-cb">
   </label>
@@ -1939,7 +1966,9 @@
   <label class="food-item">
     <span class="rank-num">12</span>
     <div class="food-body">
-      <div class="food-name">🌿 ブン・ダウ・マム・トム <span class="food-vn">Bún đậu mắm tôm</span></div>
+      <div class="food-name">🌿 ブン・ダウ・マム・トム</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Bún đậu mắm tôm</div>
       <div class="food-desc">豆腐・揚げ春巻き・豚をエビ味噌ディップで食べる。においが強烈だがハマる人続出。チャレンジ枠</div>
     </div>
     <input type="checkbox" class="food-cb">
@@ -1948,7 +1977,9 @@
   <label class="food-item">
     <span class="rank-num">13</span>
     <div class="food-body">
-      <div class="food-name">🍲 ブン・モック <span class="food-vn">Bún mọc Thủy</span></div>
+      <div class="food-name">🍲 ブン・モック</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Bún mọc</div>
       <div class="food-desc">豚団子・きのこ・つくねのやさしいスープ麺。5/9朝食に予定済</div>
     </div>
     <input type="checkbox" class="food-cb">
@@ -1957,7 +1988,9 @@
   <label class="food-item">
     <span class="rank-num">14</span>
     <div class="food-body">
-      <div class="food-name">🧋 チェー <span class="food-vn">Chè</span></div>
+      <div class="food-name">🧋 チェー</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Chè</div>
       <div class="food-desc">豆・ゼリー・タピオカ・フルーツ×甘いシロップのデザートドリンク。暑い時の一杯</div>
     </div>
     <input type="checkbox" class="food-cb">
@@ -1966,7 +1999,9 @@
   <label class="food-item">
     <span class="rank-num">15</span>
     <div class="food-body">
-      <div class="food-name">☕ コンデンスミルクコーヒー <span class="food-vn">Cà phê sữa đá</span></div>
+      <div class="food-name">☕ コンデンスミルクコーヒー</div>
+      <div class="food-vn-note">現地語で注文 👇</div>
+      <div class="food-vn-big">Cà phê sữa đá</div>
       <div class="food-desc">Phinフィルターでゆっくり落としたコーヒー×コンデンスミルク×大量の氷。甘くて濃い。カフェイン強烈</div>
     </div>
     <input type="checkbox" class="food-cb">

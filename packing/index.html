@@ -47,55 +47,70 @@
   }
   .total-badge span { color: #888; font-size: 12px; font-weight: 400; }
 
-  .progress-wrap { display: flex; align-items: center; gap: 10px; }
+  .progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   .progress-bar-bg {
-    width: 120px; height: 6px;
-    background: #e8e8e4; border-radius: 3px; overflow: hidden;
+    width: 120px;
+    height: 6px;
+    background: #e8e8e4;
+    border-radius: 3px;
+    overflow: hidden;
   }
   .progress-bar-fill {
-    height: 100%; background: #4ade80; border-radius: 3px; transition: width .3s ease;
+    height: 100%;
+    background: #4ade80;
+    border-radius: 3px;
+    transition: width .3s ease;
   }
-  .progress-label { font-size: 12px; color: #888; white-space: nowrap; }
+  .progress-label {
+    font-size: 12px;
+    color: #888;
+    white-space: nowrap;
+  }
   .progress-label strong { color: #1a1a1a; font-weight: 600; }
 
   .reset-btn {
-    font-size: 11px; color: #aaa; background: none; border: none;
-    cursor: pointer; padding: 2px 4px; border-radius: 4px; transition: color .15s;
+    font-size: 11px;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: color .15s;
   }
   .reset-btn:hover { color: #555; }
 
-  /* タブ */
-  .tab-nav {
-    display: flex; background: #e8e8e4; border-radius: 11px; padding: 3px; gap: 2px;
-  }
-  .tab-btn {
-    flex: 1; padding: 9px 4px; border: none; background: none; border-radius: 8px;
-    font-size: 12px; font-weight: 500; color: #888; cursor: pointer;
-    line-height: 1.3; -webkit-tap-highlight-color: transparent;
-    transition: background .15s, color .15s;
-  }
-  .tab-btn.active {
-    background: #fff; color: #1a1a1a; font-weight: 600;
-    box-shadow: 0 1px 3px rgba(0,0,0,.12);
-  }
-  .tab-content { display: none; flex-direction: column; gap: 16px; }
-  .tab-content.active { display: flex; }
-
   .card { background: #fff; border: 0.5px solid #d0d0c8; border-radius: 12px; overflow: hidden; }
   .card-header {
-    padding: 11px 16px; border-bottom: 0.5px solid #e8e8e4;
-    display: flex; align-items: center; justify-content: space-between;
+    padding: 11px 16px;
+    border-bottom: 0.5px solid #e8e8e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .card-title { font-size: 15px; font-weight: 500; }
   .cat-weight {
-    font-size: 12px; font-weight: 500; color: #888;
-    background: #f1f0ec; padding: 2px 8px; border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #888;
+    background: #f1f0ec;
+    padding: 2px 8px;
+    border-radius: 6px;
   }
 
   .item-list { padding: 4px 0; }
   .item-row {
-    display: flex; align-items: center; gap: 12px; padding: 7px 16px;
-    cursor: pointer; transition: background .1s; -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: background .1s;
+    -webkit-tap-highlight-color: transparent;
   }
   .item-row:hover { background: #fafaf8; }
   .item-row + .item-row { border-top: 0.5px solid #f0f0ec; }
@@ -103,17 +118,29 @@
   .item-row.checked .item-name,
   .item-row.checked .item-brand,
   .item-row.checked .item-note,
-  .item-row.checked .item-weight {
-    color: #b0b0a8 !important; text-decoration: line-through; text-decoration-color: #c0c0b8;
-  }
+  .item-row.checked .item-weight { color: #b0b0a8 !important; text-decoration: line-through; text-decoration-color: #c0c0b8; }
 
   .check-box {
-    width: 20px; height: 20px; border: 1.5px solid #d0d0c8; border-radius: 6px;
-    flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-    transition: background .15s, border-color .15s; background: #fff;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #d0d0c8;
+    border-radius: 6px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .15s, border-color .15s;
+    background: #fff;
   }
-  .item-row.checked .check-box { background: #4ade80; border-color: #4ade80; }
-  .check-icon { display: none; width: 10px; height: 10px; }
+  .item-row.checked .check-box {
+    background: #4ade80;
+    border-color: #4ade80;
+  }
+  .check-icon {
+    display: none;
+    width: 10px;
+    height: 10px;
+  }
   .item-row.checked .check-icon { display: block; }
 
   .item-content { flex: 1; min-width: 0; }
@@ -121,13 +148,19 @@
   .item-brand { font-size: 11px; color: #aaa; margin-top: 1px; }
   .item-note { font-size: 11px; color: #888; margin-top: 1px; }
   .item-weight {
-    font-size: 12px; color: #aaa; white-space: nowrap;
-    font-variant-numeric: tabular-nums; flex-shrink: 0;
+    font-size: 12px;
+    color: #aaa;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
   }
 
   .strip-note {
-    padding: 7px 16px; background: #fffbeb;
-    border-top: 0.5px solid #fcd34d; font-size: 12px; color: #92400e;
+    padding: 7px 16px;
+    background: #fffbeb;
+    border-top: 0.5px solid #fcd34d;
+    font-size: 12px;
+    color: #92400e;
   }
 
   .footer { font-size: 11px; color: #aaa; text-align: right; margin-top: 4px; }
@@ -153,733 +186,585 @@
     </div>
   </div>
 
-  <!-- タブ切り替え -->
-  <div class="tab-nav">
-    <button class="tab-btn active" data-tab="walk" onclick="showTab('walk')">🚶 街歩き</button>
-    <button class="tab-btn" data-tab="flight" onclick="showTab('flight')">✈️ 機内</button>
-    <button class="tab-btn" data-tab="all" onclick="showTab('all')">📦 全アイテム</button>
-  </div>
-
-  <!-- ===== 街歩きタブ ===== -->
-  <div id="tab-walk" class="tab-content active">
+  <!-- 身に着けるもの -->
+  <div>
+    <h1>身に着けるもの（重量除外）</h1>
     <div class="card">
       <div class="card-header">
-        <div class="card-title">🚶 街歩きセット</div>
-        <div class="cat-weight">927g</div>
+        <div class="card-title">身に着けるもの</div>
+        <div class="cat-weight">重量除外</div>
+      </div>
+      <div class="item-list" id="cat-wear">
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content"><div class="item-name">Tシャツ</div></div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content"><div class="item-name">サルエルパンツ</div></div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content"><div class="item-name">靴下</div></div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">iPhone</div>
+          </div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">Apple Watch 11</div>
+          </div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">AirPods Pro 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- バッグ類 -->
+  <div>
+    <h1>バッグ類</h1>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">バッグ類</div>
+        <div class="cat-weight">874g</div>
       </div>
       <div class="item-list">
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">ボディバッグ</div></div>
+          <div class="item-content">
+            <div class="item-name">メインバッグ</div>
+            <div class="item-brand">CABIN ZERO / CLASSIC 28L</div>
+            <div class="item-note">世界中のLCCで座席下に格納可能</div>
+          </div>
+          <div class="item-weight">605g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">ボディバッグ</div>
+            <div class="item-brand">Bellroy / Lite Sling</div>
+            <div class="item-note">現地での街歩き用</div>
+          </div>
           <div class="item-weight">243g</div>
         </div>
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">アームカバー</div></div>
-          <div class="item-weight">43g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">ケーブル 0.9m</div></div>
-          <div class="item-weight">22g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">モバイルバッテリー 10,000mAh</div></div>
-          <div class="item-weight">207g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">サングラス/ケース</div></div>
-          <div class="item-weight">55g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">折り畳み傘</div></div>
-          <div class="item-weight">79g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">レインポンチョ</div></div>
-          <div class="item-weight">18g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">折り畳み帽子</div></div>
-          <div class="item-weight">70g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">タオル</div></div>
-          <div class="item-weight">50g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">ウェットティッシュ（10枚）</div></div>
-          <div class="item-weight">36g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">財布</div></div>
-          <div class="item-weight">64g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">パスポート</div></div>
-          <div class="item-weight">40g</div>
+          <div class="item-content">
+            <div class="item-name">エコバッグ</div>
+          </div>
+          <div class="item-weight">26g</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== 機内タブ ===== -->
-  <div id="tab-flight" class="tab-content">
+  <!-- 衣類 -->
+  <div>
+    <h1>衣類</h1>
     <div class="card">
       <div class="card-header">
-        <div class="card-title">✈️ 機内セット</div>
-        <div class="cat-weight">1,200g</div>
+        <div class="card-title">衣類</div>
+        <div class="cat-weight">962g</div>
       </div>
       <div class="item-list">
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">エコバッグ</div></div>
-          <div class="item-weight">26g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">Tシャツ ×2</div></div>
+          <div class="item-content">
+            <div class="item-name">Tシャツ ×2</div>
+            <div class="item-brand">リライブ / リライブシャツ</div>
+          </div>
           <div class="item-weight">284g</div>
         </div>
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">圧着ソックス</div></div>
+          <div class="item-content">
+            <div class="item-name">パンツ ×2</div>
+            <div class="item-brand">ユニクロ / エアリズム</div>
+          </div>
+          <div class="item-weight">92g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">靴下 ×2</div>
+            <div class="item-brand">モンベル / WIC.ショートソックス</div>
+          </div>
+          <div class="item-weight">73g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">短パン（水陸両用）</div>
+            <div class="item-brand">モンベル / O.D.ショーツ Men's</div>
+            <div class="item-note">街歩きからホテルのプールまで完結</div>
+          </div>
+          <div class="item-weight">196g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">圧着ソックス</div>
+            <div class="item-brand">Dr.Scholl / フライトソックス</div>
+            <div class="item-note">膝下まで。移動中のむくみを防ぐ</div>
+          </div>
           <div class="item-weight">42g</div>
         </div>
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">ULダウン</div></div>
+          <div class="item-content">
+            <div class="item-name">ULダウン</div>
+            <div class="item-brand">ユニクロ / ウルトラライトダウン</div>
+            <div class="item-note">機内・海外の過剰冷房対策</div>
+          </div>
           <div class="item-weight">232g</div>
         </div>
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">アームカバー</div></div>
+          <div class="item-content">
+            <div class="item-name">アームカバー</div>
+            <div class="item-brand">おたふく手袋 / アームカバー</div>
+            <div class="item-note">少し寒いとき・日焼け対策に</div>
+          </div>
           <div class="item-weight">43g</div>
         </div>
+      </div>
+      <div class="strip-note">すべて速乾素材。シャワーのついでに洗い、部屋干しで翌日乾く</div>
+    </div>
+  </div>
+
+  <!-- 洗濯 -->
+  <div>
+    <h1>洗濯</h1>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">洗濯</div>
+        <div class="cat-weight">125g</div>
+      </div>
+      <div class="item-list">
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">Type-A/C 変換アダプタ</div></div>
-          <div class="item-weight">4g</div>
+          <div class="item-content">
+            <div class="item-name">洗濯ロープ</div>
+            <div class="item-brand">シートゥサミット / クローズライン</div>
+            <div class="item-note">洗濯バサミ不要。名作</div>
+          </div>
+          <div class="item-weight">28g</div>
         </div>
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">ケーブル 0.9m</div></div>
-          <div class="item-weight">22g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">モバイルバッテリー 10,000mAh</div></div>
-          <div class="item-weight">207g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">サングラス/ケース</div></div>
-          <div class="item-weight">55g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">折り畳み帽子</div></div>
-          <div class="item-weight">70g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">タオル</div></div>
-          <div class="item-weight">50g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">ウェットティッシュ（10枚）</div></div>
-          <div class="item-weight">36g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">ボールペン</div></div>
-          <div class="item-weight">10g</div>
-        </div>
-        <div class="item-row" onclick="toggle(this)">
-          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">耳栓</div></div>
+          <div class="item-content">
+            <div class="item-name">延長用の紐</div>
+            <div class="item-brand">CRSHIP / パラコード</div>
+            <div class="item-note">ロープの長さを拡張するバッファ</div>
+          </div>
           <div class="item-weight">7g</div>
         </div>
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">財布</div></div>
-          <div class="item-weight">64g</div>
+          <div class="item-content">
+            <div class="item-name">洗濯袋</div>
+            <div class="item-brand">アタック / どこでも袋でお洗たく</div>
+            <div class="item-note">浸け置き・もみ洗いが効率的</div>
+          </div>
+          <div class="item-weight">46g</div>
         </div>
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">パスポート</div></div>
-          <div class="item-weight">40g</div>
+          <div class="item-content">
+            <div class="item-name">洗剤（小分け）</div>
+            <div class="item-brand">アタック / アタックZERO</div>
+          </div>
+          <div class="item-weight">17g</div>
         </div>
         <div class="item-row" onclick="toggle(this)">
           <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="item-content"><div class="item-name">マジックテープ</div></div>
-          <div class="item-weight">8g</div>
+          <div class="item-content">
+            <div class="item-name">折り畳みハンガー</div>
+          </div>
+          <div class="item-weight">27g</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== 全アイテムタブ ===== -->
-  <div id="tab-all" class="tab-content">
-
-    <!-- 身に着けるもの -->
-    <div>
-      <h1>身に着けるもの（重量除外）</h1>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">身に着けるもの</div>
-          <div class="cat-weight">重量除外</div>
+  <!-- 電子機器 -->
+  <div>
+    <h1>電子機器</h1>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">電子機器</div>
+        <div class="cat-weight">398g</div>
+      </div>
+      <div class="item-list">
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">ACアダプタ</div>
+            <div class="item-brand">Anker / Nano 3, 47W</div>
+            <div class="item-note">2ポート同時急速充電</div>
+          </div>
+          <div class="item-weight">87g</div>
         </div>
-        <div class="item-list" id="cat-wear">
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">Tシャツ</div></div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">コンセント変換プラグ</div>
+            <div class="item-brand">エレコム / 電源変換プラグ</div>
+            <div class="item-note">訪問国の規格に合わせたもの（全世界対応は不要）</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">サルエルパンツ</div></div>
+          <div class="item-weight">11g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">Apple Watch充電器</div>
+            <div class="item-brand">SATECHI / 置くだけポータブル5W</div>
+            <div class="item-note">充電器に直挿しできて軽量</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">靴下</div></div>
+          <div class="item-weight">28g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">Type-A/C 変換アダプタ</div>
+            <div class="item-brand">MSL / 変換アダプタ</div>
+            <div class="item-note">機内はType-Aのみが多い</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">iPhone</div></div>
+          <div class="item-weight">4g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">Type-C メス-メス 延長コネクタ</div>
+            <div class="item-brand">YFFSFDC</div>
+            <div class="item-note">ケーブル延長など1個あると便利</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">Apple Watch 11</div></div>
+          <div class="item-weight">5g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">ケーブル 1.8m</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">AirPods Pro 3</div></div>
+          <div class="item-weight">34g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">ケーブル 0.9m</div>
+            <div class="item-brand">Anker / 高耐久ナイロン</div>
+            <div class="item-note">取り回し重視</div>
           </div>
+          <div class="item-weight">22g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">モバイルバッテリー 10,000mAh</div>
+            <div class="item-brand">Anker / Power Bank 10000mAh</div>
+            <div class="item-note">容量と質量のバランスが最適</div>
+          </div>
+          <div class="item-weight">207g</div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- バッグ類 -->
-    <div>
-      <h1>バッグ類</h1>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">バッグ類</div>
-          <div class="cat-weight">874g</div>
+  <!-- 薬・防虫 -->
+  <div>
+    <h1>薬・防虫</h1>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">薬・防虫</div>
+        <div class="cat-weight">192g</div>
+      </div>
+      <div class="item-list">
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">鎮痛剤 / 酔い止め</div>
+          </div>
         </div>
-        <div class="item-list">
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">メインバッグ</div>
-              <div class="item-brand">CABIN ZERO / CLASSIC 28L</div>
-              <div class="item-note">世界中のLCCで座席下に格納可能</div>
-            </div>
-            <div class="item-weight">605g</div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">整腸剤 / 胃薬</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">ボディバッグ</div>
-              <div class="item-brand">Bellroy / Lite Sling</div>
-              <div class="item-note">現地での街歩き用</div>
-            </div>
-            <div class="item-weight">243g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">風邪薬 / 下痢止め</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">エコバッグ</div></div>
-            <div class="item-weight">26g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">虫除けスプレー</div>
+            <div class="item-note">デング熱等のリスク低減</div>
           </div>
+          <div class="item-weight">44g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">おすだけベープ</div>
+            <div class="item-brand">フマキラー / おすだけベープ</div>
+            <div class="item-note">部屋に潜む蚊を一掃。保安検査での没収リスクあり</div>
+          </div>
+          <div class="item-weight">34g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">ムヒ</div>
+            <div class="item-brand">池田模範堂 / ムヒ</div>
+          </div>
+          <div class="item-weight">20g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">マスク</div>
+          </div>
+          <div class="item-weight">13g</div>
+        </div>
+      </div>
+      <div class="strip-note">薬（錠剤）合計 81g</div>
+    </div>
+  </div>
+
+  <!-- 洗面具 -->
+  <div>
+    <h1>洗面具</h1>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">洗面具</div>
+        <div class="cat-weight">181g</div>
+      </div>
+      <div class="item-list">
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">オールインワンシャンプー</div>
+            <div class="item-brand">TELESA / シャントリボディ</div>
+            <div class="item-note">洗顔・シャンプー・トリートメント・ボディソープを1本に集約</div>
+          </div>
+          <div class="item-weight">40g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">オールインワン化粧水</div>
+            <div class="item-brand">Nile / スキンケアローション</div>
+            <div class="item-note">化粧水・美容液・乳液を1本に集約</div>
+          </div>
+          <div class="item-weight">37g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">クレンジング</div>
+            <div class="item-brand">サナ / なめらか本舗 豆乳イソフラボン</div>
+          </div>
+          <div class="item-weight">15g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">歯ブラシ・歯磨き粉・フロス</div>
+            <div class="item-brand">3M / クリンプロ</div>
+          </div>
+          <div class="item-weight">44g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">髭剃り</div>
+          </div>
+          <div class="item-weight">11g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">爪切り</div>
+            <div class="item-brand">マツキヨ / ツメキリ S</div>
+            <div class="item-note">ハサミの代わりにもなる</div>
+          </div>
+          <div class="item-weight">23g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">顔用 下地/BB</div>
+          </div>
+          <div class="item-weight">12g</div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- 衣類 -->
-    <div>
-      <h1>衣類</h1>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">衣類</div>
-          <div class="cat-weight">962g</div>
-        </div>
-        <div class="item-list">
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">Tシャツ ×2</div>
-              <div class="item-brand">リライブ / リライブシャツ</div>
-            </div>
-            <div class="item-weight">284g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">パンツ ×2</div>
-              <div class="item-brand">ユニクロ / エアリズム</div>
-            </div>
-            <div class="item-weight">92g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">靴下 ×2</div>
-              <div class="item-brand">モンベル / WIC.ショートソックス</div>
-            </div>
-            <div class="item-weight">73g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">短パン（水陸両用）</div>
-              <div class="item-brand">モンベル / O.D.ショーツ Men's</div>
-              <div class="item-note">街歩きからホテルのプールまで完結</div>
-            </div>
-            <div class="item-weight">196g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">圧着ソックス</div>
-              <div class="item-brand">Dr.Scholl / フライトソックス</div>
-              <div class="item-note">膝下まで。移動中のむくみを防ぐ</div>
-            </div>
-            <div class="item-weight">42g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">ULダウン</div>
-              <div class="item-brand">ユニクロ / ウルトラライトダウン</div>
-              <div class="item-note">機内・海外の過剰冷房対策</div>
-            </div>
-            <div class="item-weight">232g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">アームカバー</div>
-              <div class="item-brand">おたふく手袋 / アームカバー</div>
-              <div class="item-note">少し寒いとき・日焼け対策に</div>
-            </div>
-            <div class="item-weight">43g</div>
-          </div>
-        </div>
-        <div class="strip-note">すべて速乾素材。シャワーのついでに洗い、部屋干しで翌日乾く</div>
+  <!-- 天候対応 -->
+  <div>
+    <h1>天候対応</h1>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">天候対応</div>
+        <div class="cat-weight">398g</div>
       </div>
-    </div>
-
-    <!-- 洗濯 -->
-    <div>
-      <h1>洗濯</h1>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">洗濯</div>
-          <div class="cat-weight">125g</div>
+      <div class="item-list">
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">サングラス/ケース</div>
+          </div>
+          <div class="item-weight">55g</div>
         </div>
-        <div class="item-list">
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">洗濯ロープ</div>
-              <div class="item-brand">シートゥサミット / クローズライン</div>
-              <div class="item-note">洗濯バサミ不要。名作</div>
-            </div>
-            <div class="item-weight">28g</div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">折り畳み傘</div>
+            <div class="item-brand">AMVEL / pentagon LARGE</div>
+            <div class="item-note">70g台の超軽量傘</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">延長用の紐</div>
-              <div class="item-brand">CRSHIP / パラコード</div>
-              <div class="item-note">ロープの長さを拡張するバッファ</div>
-            </div>
-            <div class="item-weight">7g</div>
+          <div class="item-weight">79g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">レインポンチョ</div>
+            <div class="item-brand">セリア / コンパクトレインポンチョ</div>
+            <div class="item-note">暴風雨・バイク移動時の防水バックアップ</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">洗濯袋</div>
-              <div class="item-brand">アタック / どこでも袋でお洗たく</div>
-              <div class="item-note">浸け置き・もみ洗いが効率的</div>
-            </div>
-            <div class="item-weight">46g</div>
+          <div class="item-weight">18g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">ビーチサンダル</div>
+            <div class="item-note">主に機内・ホテルで使用</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">洗剤（小分け）</div>
-              <div class="item-brand">アタック / アタックZERO</div>
-            </div>
-            <div class="item-weight">17g</div>
+          <div class="item-weight">176g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">折り畳み帽子</div>
+            <div class="item-brand">GADIEMKENSD / アウトドアハット</div>
+            <div class="item-note">ポケットに収納できる柔軟性を重視</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">折り畳みハンガー</div></div>
-            <div class="item-weight">27g</div>
-          </div>
+          <div class="item-weight">70g</div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- 電子機器 -->
-    <div>
-      <h1>電子機器</h1>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">電子機器</div>
-          <div class="cat-weight">398g</div>
+  <!-- その他 -->
+  <div>
+    <h1>その他</h1>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">その他</div>
+        <div class="cat-weight">251g</div>
+      </div>
+      <div class="item-list">
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">タオル</div>
+            <div class="item-brand">コンテックス / MOKU フェイスタオルM</div>
+            <div class="item-note">すぐ乾く・薄い・長い。旅のタオルの最適解</div>
+          </div>
+          <div class="item-weight">50g</div>
         </div>
-        <div class="item-list">
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">ACアダプタ</div>
-              <div class="item-brand">Anker / Nano 3, 47W</div>
-              <div class="item-note">2ポート同時急速充電</div>
-            </div>
-            <div class="item-weight">87g</div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">ウェットティッシュ（10枚）</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">コンセント変換プラグ</div>
-              <div class="item-brand">エレコム / 電源変換プラグ</div>
-              <div class="item-note">訪問国の規格に合わせたもの（全世界対応は不要）</div>
-            </div>
-            <div class="item-weight">11g</div>
+          <div class="item-weight">36g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">ボールペン</div>
+            <div class="item-brand">三菱鉛筆 / ジェットストリーム</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">Apple Watch充電器</div>
-              <div class="item-brand">SATECHI / 置くだけポータブル5W</div>
-              <div class="item-note">充電器に直挿しできて軽量</div>
-            </div>
-            <div class="item-weight">28g</div>
+          <div class="item-weight">10g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">耳栓</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">Type-A/C 変換アダプタ</div>
-              <div class="item-brand">MSL / 変換アダプタ</div>
-              <div class="item-note">機内はType-Aのみが多い</div>
-            </div>
-            <div class="item-weight">4g</div>
+          <div class="item-weight">7g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">南京錠</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">Type-C メス-メス 延長コネクタ</div>
-              <div class="item-brand">YFFSFDC</div>
-              <div class="item-note">ケーブル延長など1個あると便利</div>
-            </div>
-            <div class="item-weight">5g</div>
+          <div class="item-weight">18g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">財布</div>
+            <div class="item-brand">ミレー / ライトウォレット</div>
+            <div class="item-note">中身を厳選したトラベル仕様（現金・クレカ込み）</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">ケーブル 1.8m</div></div>
-            <div class="item-weight">34g</div>
+          <div class="item-weight">64g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">パスポート</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">ケーブル 0.9m</div>
-              <div class="item-brand">Anker / 高耐久ナイロン</div>
-              <div class="item-note">取り回し重視</div>
-            </div>
-            <div class="item-weight">22g</div>
+          <div class="item-weight">40g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">情報まとめ紙</div>
+            <div class="item-note">eチケット・ホテル住所などをプリント。スマホ故障対策</div>
           </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">モバイルバッテリー 10,000mAh</div>
-              <div class="item-brand">Anker / Power Bank 10000mAh</div>
-              <div class="item-note">容量と質量のバランスが最適</div>
-            </div>
-            <div class="item-weight">207g</div>
+          <div class="item-weight">6g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">マジックテープ</div>
+            <div class="item-brand">セリア / べんりベルト</div>
+            <div class="item-note">服を丸めるとネックピローになる</div>
           </div>
+          <div class="item-weight">8g</div>
+        </div>
+        <div class="item-row" onclick="toggle(this)">
+          <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="item-content">
+            <div class="item-name">ビニール袋</div>
+            <div class="item-note">ゴミ・防水用。何かと便利</div>
+          </div>
+          <div class="item-weight">12g</div>
         </div>
       </div>
     </div>
-
-    <!-- 薬・防虫 -->
-    <div>
-      <h1>薬・防虫</h1>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">薬・防虫</div>
-          <div class="cat-weight">192g</div>
-        </div>
-        <div class="item-list">
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">鎮痛剤 / 酔い止め</div></div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">整腸剤 / 胃薬</div></div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">風邪薬 / 下痢止め</div></div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">虫除けスプレー</div>
-              <div class="item-note">デング熱等のリスク低減</div>
-            </div>
-            <div class="item-weight">44g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">おすだけベープ</div>
-              <div class="item-brand">フマキラー / おすだけベープ</div>
-              <div class="item-note">部屋に潜む蚊を一掃。保安検査での没収リスクあり</div>
-            </div>
-            <div class="item-weight">34g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">ムヒ</div>
-              <div class="item-brand">池田模範堂 / ムヒ</div>
-            </div>
-            <div class="item-weight">20g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">マスク</div></div>
-            <div class="item-weight">13g</div>
-          </div>
-        </div>
-        <div class="strip-note">薬（錠剤）合計 81g</div>
-      </div>
-    </div>
-
-    <!-- 洗面具 -->
-    <div>
-      <h1>洗面具</h1>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">洗面具</div>
-          <div class="cat-weight">181g</div>
-        </div>
-        <div class="item-list">
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">オールインワンシャンプー</div>
-              <div class="item-brand">TELESA / シャントリボディ</div>
-              <div class="item-note">洗顔・シャンプー・トリートメント・ボディソープを1本に集約</div>
-            </div>
-            <div class="item-weight">40g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">オールインワン化粧水</div>
-              <div class="item-brand">Nile / スキンケアローション</div>
-              <div class="item-note">化粧水・美容液・乳液を1本に集約</div>
-            </div>
-            <div class="item-weight">37g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">クレンジング</div>
-              <div class="item-brand">サナ / なめらか本舗 豆乳イソフラボン</div>
-            </div>
-            <div class="item-weight">15g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">歯ブラシ・歯磨き粉・フロス</div>
-              <div class="item-brand">3M / クリンプロ</div>
-            </div>
-            <div class="item-weight">44g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">髭剃り</div></div>
-            <div class="item-weight">11g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">爪切り</div>
-              <div class="item-brand">マツキヨ / ツメキリ S</div>
-              <div class="item-note">ハサミの代わりにもなる</div>
-            </div>
-            <div class="item-weight">23g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">顔用 下地/BB</div></div>
-            <div class="item-weight">12g</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 天候対応 -->
-    <div>
-      <h1>天候対応</h1>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">天候対応</div>
-          <div class="cat-weight">398g</div>
-        </div>
-        <div class="item-list">
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">サングラス/ケース</div></div>
-            <div class="item-weight">55g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">折り畳み傘</div>
-              <div class="item-brand">AMVEL / pentagon LARGE</div>
-              <div class="item-note">70g台の超軽量傘</div>
-            </div>
-            <div class="item-weight">79g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">レインポンチョ</div>
-              <div class="item-brand">セリア / コンパクトレインポンチョ</div>
-              <div class="item-note">暴風雨・バイク移動時の防水バックアップ</div>
-            </div>
-            <div class="item-weight">18g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">ビーチサンダル</div>
-              <div class="item-note">主に機内・ホテルで使用</div>
-            </div>
-            <div class="item-weight">176g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">折り畳み帽子</div>
-              <div class="item-brand">GADIEMKENSD / アウトドアハット</div>
-              <div class="item-note">ポケットに収納できる柔軟性を重視</div>
-            </div>
-            <div class="item-weight">70g</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- その他 -->
-    <div>
-      <h1>その他</h1>
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">その他</div>
-          <div class="cat-weight">251g</div>
-        </div>
-        <div class="item-list">
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">タオル</div>
-              <div class="item-brand">コンテックス / MOKU フェイスタオルM</div>
-              <div class="item-note">すぐ乾く・薄い・長い。旅のタオルの最適解</div>
-            </div>
-            <div class="item-weight">50g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">ウェットティッシュ（10枚）</div></div>
-            <div class="item-weight">36g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">ボールペン</div>
-              <div class="item-brand">三菱鉛筆 / ジェットストリーム</div>
-            </div>
-            <div class="item-weight">10g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">耳栓</div></div>
-            <div class="item-weight">7g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">南京錠</div></div>
-            <div class="item-weight">18g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">財布</div>
-              <div class="item-brand">ミレー / ライトウォレット</div>
-              <div class="item-note">中身を厳選したトラベル仕様（現金・クレカ込み）</div>
-            </div>
-            <div class="item-weight">64g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content"><div class="item-name">パスポート</div></div>
-            <div class="item-weight">40g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">情報まとめ紙</div>
-              <div class="item-note">eチケット・ホテル住所などをプリント。スマホ故障対策</div>
-            </div>
-            <div class="item-weight">6g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">マジックテープ</div>
-              <div class="item-brand">セリア / べんりベルト</div>
-              <div class="item-note">服を丸めるとネックピローになる</div>
-            </div>
-            <div class="item-weight">8g</div>
-          </div>
-          <div class="item-row" onclick="toggle(this)">
-            <div class="check-box"><svg class="check-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="item-content">
-              <div class="item-name">ビニール袋</div>
-              <div class="item-note">ゴミ・防水用。何かと便利</div>
-            </div>
-            <div class="item-weight">12g</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /tab-all -->
+  </div>
 
   <div class="footer">travel-ref</div>
 </div>
 
 <script>
   const STORAGE_KEY = 'packing-checked';
-  const TAB_KEY = 'packing-tab';
 
   function getChecked() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch { return []; }
@@ -894,10 +779,9 @@
   }
 
   function updateProgress() {
-    // count only full list items (in tab-all) to avoid double-counting
-    const rows = document.querySelectorAll('#tab-all .item-row');
+    const rows = document.querySelectorAll('.item-row');
     const total = rows.length;
-    const checked = [...rows].filter(r => r.classList.contains('checked')).length;
+    const checked = document.querySelectorAll('.item-row.checked').length;
     const pct = total ? (checked / total * 100) : 0;
     document.getElementById('progressFill').style.width = pct + '%';
     document.getElementById('progressLabel').innerHTML =
@@ -907,19 +791,12 @@
   function toggle(row) {
     const key = getKey(row);
     const checked = getChecked();
-    const isChecked = row.classList.contains('checked');
-
-    // toggle all rows with the same name (compact + full list)
-    document.querySelectorAll('.item-row').forEach(r => {
-      if (getKey(r) === key) {
-        r.classList.toggle('checked', !isChecked);
-      }
-    });
-
-    if (isChecked) {
+    if (row.classList.contains('checked')) {
+      row.classList.remove('checked');
       const idx = checked.indexOf(key);
       if (idx > -1) checked.splice(idx, 1);
     } else {
+      row.classList.add('checked');
       if (!checked.includes(key)) checked.push(key);
     }
     saveChecked(checked);
@@ -932,16 +809,6 @@
     updateProgress();
   }
 
-  function showTab(id) {
-    document.querySelectorAll('.tab-btn').forEach(b => {
-      b.classList.toggle('active', b.dataset.tab === id);
-    });
-    document.querySelectorAll('.tab-content').forEach(c => {
-      c.classList.toggle('active', c.id === 'tab-' + id);
-    });
-    try { localStorage.setItem(TAB_KEY, id); } catch {}
-  }
-
   // restore on load
   (function init() {
     const checked = getChecked();
@@ -949,9 +816,6 @@
       if (checked.includes(getKey(row))) row.classList.add('checked');
     });
     updateProgress();
-    // restore last tab
-    const savedTab = localStorage.getItem(TAB_KEY) || 'walk';
-    showTab(savedTab);
   })();
 </script>
 </body>
